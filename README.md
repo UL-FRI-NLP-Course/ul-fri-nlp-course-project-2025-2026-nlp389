@@ -1,3 +1,17 @@
-# Natural language processing course: `Put name of your project here`
+# Natural language processing course: `League of Legends AI Assistant`
 
-Please, organize README and the whole structure of the repository to be self-contained and reproducible.
+A domain-specific AI assistant for **League of Legends** that leverages **Retrieval-Augmented Generation (RAG)** to provide accurate, context-aware, and up-to-date insights about gameplay, champion performance, and patch changes.
+
+---
+
+## Project Structure
+```
+.
+├── src/
+│   ├── code/        # Core implementation
+│   └── data/        # Raw and processed data (patch notes, stats, match history)
+│
+├── report/          # Project report
+│
+└── README.md
+```
