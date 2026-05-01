@@ -20,7 +20,7 @@
 %----------------------------------------------------------------------------------------
 \documentclass[fleqn,moreauthors,10pt]{ds_report}
 \usepackage[english]{babel}
-
+\usepackage{url}
 \graphicspath{{fig/}}
 
 
@@ -50,7 +50,16 @@
 \Keywords{Domain-Specific AI, Natural Language Processing, Retrieval-Augmented Generation, Game Analytics}
 \newcommand{\keywordname}{Keywords}
 
+\usepackage{listings}
+\usepackage{xcolor}
 
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    breakatwhitespace=true,
+    columns=fullflexible,
+    frame=single
+}
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
@@ -121,6 +130,149 @@ Champion performance statistics are computed from match data collected via the R
 \subsection*{Match Data}
 
 Historical match data is obtained via the Riot Games Developer API, which provide granular per-game information including champion selections, item builds, kill events, gold progression, and final outcomes. This data serves primarily as ground truth for evaluation: champion pick recommendations can be assessed against actual match outcomes from Diamond+ tier games to quantify predictive accuracy.
+
+\section*{Methods}
+
+\subsection*{Retrieval-Augmented Generation Pipeline}
+
+\subsubsection*{Motivation and Data Scope}
+
+A Retrieval-Augmented Generation (RAG) pipeline was implemented to allow the language model to answer
+questions about League of Legends patch changes accurately, without hallucinating statistics. The base
+model (\path{meta-llama/Meta-Llama-3-8B-Instruct}) has a knowledge cutoff and cannot reliably recall
+exact numerical changes from recently released patches.
+
+Patch notes were collected for patches 26.1 through 26.9, covering the full 2026 Season 1 ranked period. This range was chosen because each new season in League of Legends brings major changes to champions, items, and overall game mechanics, making older information less relevant. By focusing only on the current season, the system is able to provide answers that reflect the current meta rather than outdated gameplay patterns.
+
+In total, the scraping process produced \textbf{210 meaningful chunks} of information. Each chunk represents a specific change, such as a champion update or item adjustment, and includes metadata like patch version, date, section, subject, and type of change.
+
+\subsubsection*{Pipeline Architecture}
+
+The pipeline was built using LangChain with the following components:
+
+\begin{itemize}
+    \item \textbf{Embedding model:} \path{sentence-transformers/all-MiniLM-L6-v2} to encode chunks
+    into dense vector representations.
+    \item \textbf{Vector store:} FAISS index for efficient approximate nearest-neighbour search.
+    \item \textbf{Retriever:} Maximum Marginal Relevance (MMR) with $k=5$, $\text{fetch\_k}=20$,
+    $\lambda=0.6$ to balance retrieval relevance and diversity.
+    \item \textbf{LLM:} Llama 3 8B Instruct loaded in 4-bit NF4 quantization via
+    \texttt{bitsandbytes}.
+    \item \textbf{Chain:} Retrieved chunks, formatted with patch version and section metadata, are
+    injected into the system prompt alongside the user question.
+\end{itemize}
+
+A conversational variant was also implemented, where follow-up questions are first rewritten into
+standalone queries using the chat history before retrieval. This prevents vague follow-ups such as
+\textit{"was that too hard?"} from retrieving irrelevant chunks.
+
+\subsection*{Results}
+
+The system was evaluated qualitatively on five queries. Results are summarised in
+Table~\ref{tab:rag_results}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l p{0.6\linewidth}}
+\toprule
+\textbf{Query} & \textbf{Outcome} \\
+\midrule
+Kassadin nerfs & Correctly cited health growth nerf in patch 26.4: $119 \to 113$ \\
+Gwen nerfs & Correctly identified passive monster damage cap nerf in patch 26.2 with Riot's stated reasoning \\
+Hubris item changes & Correctly traced changes across patches 26.5 and 26.9 \\
+Seraphine bug fixes & Correctly listed four specific bug fixes from patch 26.9 \\
+Anivia viability & Correctly refused to answer — champion not present in patch data \\
+\bottomrule
+\end{tabular}
+\caption{Qualitative evaluation of the RAG pipeline across five test queries.}
+\label{tab:rag_results}
+\end{table}
+
+A key qualitative comparison was performed on Varus patch 26.2 changes. Without RAG, the model
+hallucinated plausible but entirely incorrect ability statistics. With RAG, it correctly cited the
+exact values.
+
+The conversational test on Lillia across patches 26.2 and 26.5 demonstrated correct multi-patch
+reasoning, including Riot's stated rationale for reverting earlier nerfs. When asked about item build
+changes absent from the corpus, the system correctly responded: \textit{"I don't have that information
+in the current patch data"}, confirming the system does not hallucinate beyond its context.
+
+\subsection*{Fine-Tuning Data Pipeline}
+
+\subsubsection*{Motivation}
+While the RAG system retrieves patch note context at query time, it lacks grounding in actual gameplay data — how Diamond-level players build champions, perform, and win or lose in practice. To address this, we constructed a supervised fine-tuning (SFT) dataset from real ranked match data, following the QLoRA approach demonstrated in the course material.
+
+\subsubsection*{Data Collection}
+Match data was collected from Diamond EUW ranked players using the Riot Games API. Player names and tags were scraped from op.gg, converted to PUUIDs via the Riot Account API, and used to fetch match histories. A total of 102 Diamond EUW players were collected, with 20 matches per player, yielding approximately 2{,}000 matches in total.
+
+For each match, structured fields were extracted including champion, position, patch version, items, keystone rune, summoner spells, KDA, CS, gold, damage dealt, vision score, kill participation, turret kills, game duration, allied team, and enemy team. The resulting records were stored as \path{match_data.json}.
+
+\subsubsection*{Synthetic Q\&A Generation}
+Raw match statistics are not directly suitable for language model fine-tuning, which requires natural language instruction-response pairs. We therefore used \path{meta-llama/Meta-Llama-3-8B-Instruct} — the same model used in the RAG pipeline — to generate natural language answers from each match record.
+
+For every match, four questions were generated covering: item build and runes, performance summary, win/loss analysis, and team composition. The model was prompted with a structured context block derived from the match fields and instructed to respond in 2--4 natural sentences using exact statistics from the data.
+
+Each training example was stored in the format expected by \texttt{SFTTrainer}:
+
+\begin{lstlisting}
+### Human: How did Zed perform in this Jungle game on patch 16.5?
+
+### Context: Champion: Zed | Position: Jungle | Patch: 16.5 ...
+
+### Assistant: Zed had a dominant performance, finishing 7/3/14 with
+232 CS and 16,070 gold in under 30 minutes. His 66% kill
+participation shows consistent map presence throughout the game.
+\end{lstlisting}
+
+\subsubsection*{Fine-Tuning}
+
+The base model was fine-tuned on the 4,876 instruction-response pairs using QLoRA,
+which freezes the original model weights and trains only a small set of low-rank adapter
+matrices. This keeps the model's general language capabilities intact while steering it
+toward Diamond-level gameplay knowledge — item choices, rune rationales, and performance
+patterns specific to high-ELO ranked play. Training ran for a single epoch, which was
+sufficient given that the dataset was synthetically generated with consistent formatting
+and low noise.
+
+
+\subsubsection*{Qualitative Evaluation}
+
+The fine-tuned model was evaluated by posing eight natural language questions about
+Diamond EUW gameplay without providing any match context in the prompt. The responses
+were assessed qualitatively against known high-level play standards.
+
+The model demonstrated clear adaptation to the target domain — answers were fluent,
+confidently phrased, and structured in the style of a gameplay analyst. Champion
+identities were correctly understood: Hecarim was described as a mobility-focused
+jungler and correctly assigned Flash and Ghost, Ahri's roaming potential was accurately
+highlighted, and Zed was correctly framed as an assassin.
+
+However, several factual errors were present. The suggested item build for Zed included
+Mejai's Soulstealer and Infinity Edge — neither of which are appropriate for the
+champion. Lulu support was described as building Liandry's Torment and Axiom Arc,
+whereas enchanter items such as Moonstone Renewer and Shurelya's Battlesong are
+standard. The model also incorrectly dismissed Hubris as a weak first item for
+assassins, despite it being a common and effective choice in Diamond play. Win rate
+figures cited for specific champions were stated with false precision and likely
+fabricated.
+
+These errors are a direct consequence of the data pipeline: the training pairs were
+generated synthetically using the same base model, without any ground truth
+verification against actual item builds or champion statistics. The model therefore
+learned the \textit{format and tone} of high-level analysis effectively, but inherited
+and reinforced factual inaccuracies present in the generated data. This is a known
+limitation of purely synthetic instruction tuning and motivates the hybrid RAG approach
+discussed in the future work section, where retrieved patch and build data would provide
+factual grounding at inference time.
+
+\section*{Future Work}
+
+This project evaluated RAG and supervised fine-tuning as two separate approaches.
+A natural next step would be to combine them: using the fine-tuned model as the backbone
+of the RAG pipeline, so that the model brings domain-adapted language and reasoning
+while still retrieving up-to-date patch note context at query time.
+
+
 
 % Use the Methods section to describe what you did an how you did it -- in what way did you prepare the data, what algorithms did you use, how did you test various solutions ... Provide all the required details for a reproduction of your work.
 
