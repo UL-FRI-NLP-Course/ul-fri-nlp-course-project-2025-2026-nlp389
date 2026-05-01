@@ -1,0 +1,44 @@
+{
+  "kassadin_viability": {
+    "question": "Is Kassadin still strong in mid lane? What nerfs did he receive?",
+    "answer": "According to the patch notes, Kassadin received a nerf in Patch 26.4, specifically:\n\n* Health Growth: from 119 to 113\n\nThis change aimed to balance his high late-game damage and mobile scaling fantasy by introducing weaknesses earlier in the game.\n\nNo other nerfs were mentioned in the provided patch notes for Kassadin."
+  },
+  "gwen_nerfs": {
+    "question": "What nerfs did Gwen receive across the 26.x patches and why?",
+    "answer": "According to the patch notes, Gwen received a nerf in Patch 26.2 Notes.\n\nIn Patch 26.2 Notes, Gwen's monster damage cap in her passive, \"A Thousand Cuts\", was reduced from 5 (+10% AP) to 3 (+5% AP). This change was made to ensure that Gwen doesn't become too powerful, especially against jungle camps.\n\n(Patch: Patch 26.2 Notes, Date: 2026-01-21, Section: Champions, Subject: Gwen)"
+  },
+  "item_changes": {
+    "question": "What changes were made to Hubris and other items in the 26.x patches?",
+    "answer": "According to the provided patch notes, here are the changes made to Hubris and other items:\n\n* In Patch 26.9, Hubris' cost was adjusted to make it more comparable to other 1st-slot lethality items, but it felt too strong and was differentiated from immediate powerspikes like Youmuu's.\n* In Patch 26.5, Hubris was buffed to allow assassins to get the snowball rolling earlier, making it a stronger option.\n* There were no changes mentioned to Hubris in Patches 26.2 and 26.3.\n* No specific changes were mentioned to other items (Bandlepipes, Dusk and Dawn, and Chainlaced Crushers) in these patches."
+  },
+  "seraphine_bugfix": {
+    "question": "Are there any bug fixes related to Seraphine?",
+    "answer": "Yes, according to the patch notes, there were several bug fixes related to Seraphine:\n\n* In Patch 26.9 Notes, Seraphine's Q has been re-scripted, and the visual should now more accurately reflect the hitbox of the spell.\n* In Patch 26.9 Notes, fixed a bug that caused Seraphine's Q not to deal damage to units walking towards the center of the area of effect.\n* In Patch 26.9 Notes, fixed a bug that caused Seraphine's R not to extend when killing champions with zombie passives (e.g. Karthus, Sion), or revives.\n* In Patch 26.9 Notes, fixed a bug that caused Seraphine's abilities not to double cast when she had the exact correct mana to cast them.\n\nThese bug fixes aim to improve the functionality and accuracy of Seraphine's abilities, particularly her Q and R."
+  },
+  "anivia_viability": {
+    "question": "Is Anivia viable right now? What changes did she receive?",
+    "answer": "I don't have any information about Anivia's viability or changes in the given patch notes. The provided patch notes only contain information about specific champions' adjustments, such as Lillia, Ashe, Illaoi, Ambessa, and Annie. If you're looking for information on Anivia, I would recommend checking other sources or searching for recent patch notes that may include updates about this champion."
+  },
+  "no_rag": {
+    "question": "What changed for Varus in League of Legends patch 26.2?",
+    "answer": "According to the official LoL patch notes, in Patch 26.2 (Season 12), Varus received changes to his abilities:\n\n* His W - Hush! now has a longer duration (1.5 seconds -> 2 seconds)\n* His R - Chain of Corruption's damage amplification was increased from 20/25/30% to 25/30/35%\n\nThese changes aimed to make Varus more viable as an assassin and improve his overall performance in competitive play."
+  },
+  "with_rag": {
+    "question": "What changed for Varus in League of Legends patch 26.2?",
+    "answer": "According to the patch notes, Varus received changes in Patch 26.2 Notes. His Q - Piercing Arrow had its maximum charge base damage increased from 80 / 150 / 220 / 290 / 360 to 80 / 160 / 240 / 320 / 400, and his W - Blighted Quiver had its on-hit base damage increased from 6 / 14 / 22 / 30 / 38 to 8 / 17 / 26 / 35 / 44."
+  },
+  "conversation": [
+    {
+      "user": "What happened to Lillia across the recent patches?",
+      "bot": "According to the patch notes, Lillia received changes in Patch 26.2 Notes and Patch 26.5 Notes.\n\nIn Patch 26.2 Notes, her passive \"Dream-Laden Bough\" had its heal against large monsters changed from 39 (+15% AP) to 39 (+9% AP), and her Q \"Blooming Blows\" had its AP ratio decreased from 35% AP to 30% AP. This was done to nerf her ability to stay topped up and reduce her late-game damage.\n\nIn Patch 26.5 Notes, her ultimate \"Lilting Lullaby\" had its base damage increased from 100/150/200 to 150/200/250, and its AP ratio increased from 45% to 40%. Additionally, its cooldown was reduced from 150/130/110 to 140/120/100. These changes aimed to revert her ultimate buffs from Patch 25.19 and Q nerfs from Patch 26.02, allowing her to live out her sustained fight fantasy."
+    },
+    {
+      "user": "So was she nerfed too hard? What did Riot say about it?",
+      "bot": "According to the patch notes, Lillia was indeed nerfed too hard, and Riot decided to revert her ultimate buffs from patch 25.19 and Q nerfs from patch 26.02. They stated that they overshot her power and gave her abilities in places where she's less likely to appreciate them, making her feel \"limp\". They aimed to revert these changes to let her live out her sustained fight fantasy, allowing her to weave in and out of fights doing damage with her Q."
+    },
+    {
+      "user": "What item or build changes in those patches might have affected her performance?",
+      "bot": "I don't have that information in the current patch data."
+    }
+  ]
+}
