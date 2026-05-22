@@ -1,0 +1,167 @@
+[
+  {
+    "question": "Which champion became viable in the jungle role?",
+    "answer": "According to the patch notes, Malphite became a viable option in the jungle role after receiving changes in Patch 26.2. The notes state that Malphite \"has been a frontrunner on the Rift for a while, both in top and in the jungle\" and that they're happy to see him finding an audience there.",
+    "sources": [
+      "League of Legends Patch 26.4 Notes | Maokai | nerf",
+      "Patch 26.2 Notes | Malphite | nerf",
+      "Patch 26.2 Notes | Jayce | nerf",
+      "League of Legends Patch 26.4 Notes | Naafiri | nerf",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf"
+    ]
+  },
+  {
+    "question": "Which Top lane champion's win rate dropped after being nerfed?",
+    "answer": "Based on the provided patch notes, Zed's win rate decreased due to his nerfs in Patch 26.3, which reduced his damage to monsters by 1.7 times (from 1.2x to 0.5x) and maximum damage to epic monsters by 66.7% (from 300 to 100).",
+    "sources": [
+      "Patch 26.3 Notes | Zed | nerf",
+      "League of Legends Patch 26.6 Notes | Tryndamere | buff",
+      "League of Legends Patch 26.6 Notes | Skarner | nerf",
+      "Patch 26.1 Notes | Jax | adjustment",
+      "Patch 26.3 Notes | Varus | nerf"
+    ]
+  },
+  {
+    "question": "Which champions have a high win rate as a Support?",
+    "answer": "Based on the provided patch notes, there isn't any direct information about specific champions having a high win rate as a support role. However, we can infer that Vi, whose stats were adjusted in Patch 26.3, is intended to be more successful for the average player without relying heavily on team coordination. This could suggest that she might be a good pick for supports who prioritize self-sufficiency and long-term brawling.",
+    "sources": [
+      "Patch 26.3 Notes | Vi | buff",
+      "League of Legends Patch 26.4 Notes | Graves | nerf",
+      "League of Legends Patch 26.4 Notes | Ryze | adjustment",
+      "Patch 26.3 Notes | Armored Advance | adjustment",
+      "League of Legends Patch 26.4 Notes | Udyr | nerf"
+    ]
+  },
+  {
+    "question": "What runes should I use for Kayle Top?",
+    "answer": "Based on the provided patch notes, I can tell you that Kayle didn't receive any notable changes in terms of runes. However, if you're referring to her reworked abilities, it seems she was buffed in Patch 26.3, with her Q - Reaping Slash dealing more damage at all levels.",
+    "sources": [
+      "League of Legends Patch 26.9 Notes | [REMOVED]Phase Rush | adjustment",
+      "Patch 26.3 Notes | Kayn | adjustment",
+      "Patch 26.3 Notes | Varus | nerf",
+      "League of Legends Patch 26.9 Notes | [NEW]Doran's Bow | adjustment",
+      "League of Legends Patch 26.9 Notes | [NEW]Deathfire Touch | adjustment"
+    ]
+  },
+  {
+    "question": "What is the recommended first core item for Brand?",
+    "answer": "Based on the patch notes, there is no explicit recommendation for a first core item for Brand. However, according to the notes, Brand received a buff in Patch 26.4, increasing his monster damage cap from 40 to 50. This suggests that Brand might benefit from building towards attack damage or ability power-based items early on.",
+    "sources": [
+      "League of Legends Patch 26.9 Notes | [NEW]Doran's Helm | adjustment",
+      "League of Legends Patch 26.9 Notes | [NEW]Gluttonous Greaves | adjustment",
+      "Patch 26.3 Notes | Ezreal | buff",
+      "League of Legends Patch 26.4 Notes | Brand | buff",
+      "League of Legends Patch 26.5 Notes | Locket of the Iron Solari | adjustment"
+    ]
+  },
+  {
+    "question": "What support goes well with Tristana?",
+    "answer": "Based on the provided patch notes, I can tell you that Tristana received changes in Patch 26.1, specifically adjusting her non-crit damage and crit scaling. However, there is no information about which supports pair well with Tristana in these patch notes. To provide a more informed answer, I would need additional context or data outside of these specific patch notes.",
+    "sources": [
+      "Patch 26.1 Notes | Tristana | adjustment",
+      "League of Legends Patch 26.5 Notes | Orianna | buff",
+      "League of Legends Patch 26.6 Notes | Lissandra | adjustment",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      "League of Legends Patch 26.7 Notes | Cassiopeia | adjustment"
+    ]
+  },
+  {
+    "question": "Which support item is the best start for Yasuo Support?",
+    "answer": "Based on the provided patch notes, there is no information about support items for Yasuo specifically. However, since Yasuo received changes in Patch 26.1, we can look at the notes for clues about his playstyle and potential itemization. The notes mention that Yasuo \"doubles how much critical strike chance he gets from each item\", suggesting that he benefits greatly from critical strike chance. With this in mind, it's likely that an item providing critical strike chance would be a good starting point for Yasuo support builds.",
+    "sources": [
+      "Patch 26.1 Notes | Yasuo | adjustment",
+      "League of Legends Patch 26.9 Notes | [NEW]Gluttonous Greaves | adjustment",
+      "League of Legends Patch 26.4 Notes | Kassadin | nerf",
+      "League of Legends Patch 26.8 Notes | Yuumi | adjustment",
+      "League of Legends Patch 26.7 Notes | Swain's Hot Chicken Rewards Program | adjustment"
+    ]
+  },
+  {
+    "question": "Which keystone from the Sorcery tree replaced Phase Rush?",
+    "answer": "According to the patch notes, Phase Rush was removed in Patch 26.9. There is no mention of a Keystone replacing it in the provided patch notes.",
+    "sources": [
+      "League of Legends Patch 26.9 Notes | [REMOVED]Phase Rush | adjustment",
+      "Patch 26.3 Notes | Protoplasm Harness | adjustment",
+      "League of Legends Patch 26.8 Notes | Yuumi | adjustment",
+      "League of Legends Patch 26.9 Notes | Ezreal | adjustment",
+      "League of Legends Patch 26.4 Notes | Kennen | buff"
+    ]
+  },
+  {
+    "question": "What is the recommended starting summoner spell combination for Yuumi?",
+    "answer": "I'm happy to help! However, based on the provided patch notes, there is no information about recommended starting summoner spells for Yuumi. The patch notes only discuss changes to Yuumi's abilities and gameplay mechanics, but not specific strategies or recommendations for summoner spells.",
+    "sources": [
+      "League of Legends Patch 26.8 Notes | Yuumi | adjustment",
+      "Patch 26.1 Notes | Bugfixes & QoL | info",
+      "League of Legends Patch 26.5 Notes | Neeko | adjustment",
+      "League of Legends Patch 26.4 Notes | Xayah | nerf",
+      "League of Legends Patch 26.9 Notes | [NEW]Deathfire Touch | adjustment"
+    ]
+  },
+  {
+    "question": "Which summoner spell is recommended for Top-lane Brand?",
+    "answer": "I apologize, but there is no information about recommended summoner spells for Top-lane Brand in the provided patch notes. The patch notes only discuss changes to Brand's abilities and gameplay mechanics, but not specific strategies or recommendations for summoner spells.",
+    "sources": [
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      "Patch 26.3 Notes | Actualizer | adjustment",
+      "League of Legends Patch 26.9 Notes | [REWORKED]Voltaic Cyclosword | adjustment",
+      "Patch 26.1 Notes | Lucian | nerf",
+      "League of Legends Patch 26.4 Notes | Swain | adjustment"
+    ]
+  },
+  {
+    "question": "Why is Pantheon considered a counter to Yasuo?",
+    "answer": "I apologize, but there is no mention of Pantheon being a counter to Yasuo in the provided patch notes. In fact, the patch notes only discuss Yasuo's changes in relation to his crit damage and scaling, without mentioning any specific counters or matchups.",
+    "sources": [
+      "Patch 26.3 Notes | Varus | nerf",
+      "League of Legends Patch 26.4 Notes | Kennen | buff",
+      "Patch 26.1 Notes | Yasuo | adjustment",
+      "Patch 26.3 Notes | Yone | adjustment",
+      "Patch 26.3 Notes | Riven | adjustment"
+    ]
+  },
+  {
+    "question": "Which champion is a strong counter to Smolder ADC?",
+    "answer": "Based on the provided patch notes, I can tell you that Smolder received changes in Patch 26.2, including a reduction in armor growth from 4.7 to 4.0. However, there is no information about specific champions being strong counters to Smolder ADC.",
+    "sources": [
+      "Patch 26.2 Notes | Smolder | nerf",
+      "League of Legends Patch 26.6 Notes | Tryndamere | buff",
+      "Patch 26.3 Notes | Hecarim | adjustment",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      "League of Legends Patch 26.7 Notes | Veigar | buff"
+    ]
+  },
+  {
+    "question": "Which new starting items were just introduced?",
+    "answer": "According to the patch notes, one new starting item was introduced: [NEW]Doran's Bow, which was added in Patch 26.9.",
+    "sources": [
+      "Patch 26.1 Notes | Bugfixes & QoL | info",
+      "League of Legends Patch 26.5 Notes | Hubris | adjustment",
+      "League of Legends Patch 26.5 Notes | Locket of the Iron Solari | adjustment",
+      "Patch 26.3 Notes | Dusk and Dawn | adjustment",
+      "League of Legends Patch 26.9 Notes | [NEW]Doran's Bow | adjustment"
+    ]
+  },
+  {
+    "question": "Why is Malphite considered a good pick against attack damage heavy champions?",
+    "answer": "According to the patch notes, Malphite's changes in Patch 26.2 aimed to reduce his trading and clearing damage while maintaining his durability against physical damage and strong engage power. This suggests that Malphite is well-suited against attack damage-heavy champions, as his updated kit allows him to withstand their burst damage better than before.",
+    "sources": [
+      "Patch 26.2 Notes | Malphite | nerf",
+      "Patch 26.1 Notes | Aphelios | adjustment",
+      "Patch 26.2 Notes | Varus | nerf",
+      "League of Legends Patch 26.4 Notes | Syndra | nerf",
+      "Patch 26.2 Notes | Smolder | nerf"
+    ]
+  },
+  {
+    "question": "Which Jungle champion has an extremely high ban rate?",
+    "answer": "Based on the provided patch notes, there isn't any information about a specific Jungle champion having an extremely high ban rate. The patch notes focus on individual champion balance changes, but not on their popularity or banning trends.",
+    "sources": [
+      "Patch 26.3 Notes | Zed | nerf",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      "League of Legends Patch 26.4 Notes | Brand | buff",
+      "League of Legends Patch 26.4 Notes | Maokai | nerf",
+      "League of Legends Patch 26.9 Notes | Briar | nerf"
+    ]
+  }
+]
