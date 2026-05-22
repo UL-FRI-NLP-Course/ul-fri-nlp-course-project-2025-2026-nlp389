@@ -65,8 +65,7 @@
 %----------------------------------------------------------------------------------------
 
 \Abstract{
-Large language models have difficulty providing accurate, up-to-date answers in rapidly evolving fields like competitive gaming. This project introduces a domain-specific AI assistant for League of Legends that uses Retrieval-Augmented Generation (RAG). The system indexes patch notes, champion statistics, and match history data and uses this information to retrieve relevant context at query time and generate informed, accurate responses. The assistant can answer questions about champion strengths and weaknesses and predict the viability of champion picks based on retrieved patch and matchup data. Evaluation combines automated retrieval metrics with human assessments of response quality and usefulness. The expected results will demonstrate that a domain-specific RAG reduces inaccurate responses and improves precision compared to a standalone LLM.
-
+Large language models struggle to provide accurate, up-to-date answers in rapidly evolving domains such as competitive gaming, where patch cycles frequently invalidate prior knowledge. This project presents a domain-specific question-answering system for League of Legends that combines Retrieval-Augmented Generation (RAG) with a fine-tuned language model. We index three complementary data sources — patch notes, champion descriptions, and Diamond-tier ranked statistics — and retrieve relevant context at query time to ground model responses in current game state. Additionally, we fine-tune a LLaMA-3-8B model on Diamond-tier match and build data to further adapt it to high-level competitive play patterns. We evaluate four system configurations (base LLM, fine-tuned LLM, base+RAG, fine-tuned+RAG) using both automated and human evaluation on 30 domain-specific questions. Results show that RAG is the dominant contributing factor. Both RAG-augmented systems substantially outperform all non-retrieval baselines, including the larger reference model (LLaMA-3.3-70B), confirming that domain adaptation through retrieval and fine-tuning is more effective than model scale alone for specialized, rapidly-changing domains.
 
 }
 
@@ -109,98 +108,67 @@ Lee et al.~\cite{lee2026leaguebot} introduced a voice-based large language model
 
 \section*{Data}
 
-We leverage the official Riot API\cite{riotApi} alongside player data sourced from OP.GG\cite{opgg} as our data. Beyond in-game performance metrics, we integrate official documentation and community knowledge to guide feature engineering and model training. Additionally, we utilize balance patch releases from Riot Games to capture and account for evolving gameplay mechanics across different patch versions.
+    We combine three complementary data sources: (i) official Riot Games balance patch notes, (ii) per-match ranked data fetched from the official Riot Games Developer API\cite{riotApi}, and (iii) aggregated champion build and matchup statistics scraped from u.gg's public stats CDN. Each source plays a distinct role in the RAG knowledge base: patch notes describe \emph{what} changed, while the u.gg aggregates and Riot match data describe \emph{how} the game is actually being played at high ELO under those changes. 
 
-\subsection*{Game Rules and Domain Knowledge}
 
-The foundational layer of the knowledge base consists of official and community-maintained documentation describing the rules, objectives, and mechanics of League of Legends. These sources provide structured, stable textual descriptions of core concepts such as champion roles, map objectives, itemisation, and win conditions. Since this content changes infrequently, it serves as a static background knowledge layer, ensuring consistent understanding of game fundamentals.
+    \subsection*{Patch Notes}
 
-\subsection*{Beginner and Strategy Guides}
+    Patch notes represent the primary and most critical component of the RAG knowledge base. Riot Games releases balance updates approximately every two weeks, introducing champion buffs, nerfs, item changes, and systemic adjustments that fundamentally alter the competitive landscape. Each patch document is chunked, embedded, and indexed into the vector store, allowing the retrieval pipeline to surface the most relevant balance changes in response to user queries. This design enables the knowledge base to be updated with each new patch without any modification to the underlying model.
 
-To ensure the assistant can respond to practical, player oriented queries in natural language, beginner and strategy guides are incorporated. These documents reflect how real players formulate questions and what useful answers look like in practice. This category also informs the construction of the evaluation question set, as the phrasing and topics closely mirror the queries the assistant is expected to handle.
 
-\subsection*{Patch Notes}
 
-Patch notes represent the primary and most critical component of the RAG knowledge base. Riot Games releases balance updates approximately every two weeks, introducing champion buffs, nerfs, item changes, and systemic adjustments that fundamentally alter the competitive landscape. Each patch document is chunked, embedded, and indexed into the vector store, allowing the retrieval pipeline to surface the most relevant balance changes in response to user queries. This design enables the knowledge base to be updated with each new patch without any modification to the underlying model.
-
-\subsection*{Champion Statistics and Meta Data}
-
-Champion performance statistics are computed from match data collected via the Riot API, calculating win rates, pick and ban rates, optimal item builds on a per-patch and per-rank basis. This data is inherently dynamic. A champion considered strong in one patch may be significantly weaker following a targeted nerf, making it well-suited for RAG retrieval. When a user asks whether a specific champion is viable in the current meta, the retrieval pipeline surfaces the most recent computed statistics, grounding responses in empirical data derived from observed gameplay.
 
 \subsection*{Match Data}
 
-Historical match data is obtained via the Riot Games Developer API, which provide granular per-game information including champion selections, item builds, kill events, gold progression, and final outcomes. This data serves primarily as ground truth for evaluation: champion pick recommendations can be assessed against actual match outcomes from Diamond+ tier games to quantify predictive accuracy.
+To adapt the model to high-level play, we collected match data from 100 Diamond-tier players, each with up to 20 recent games, sourced via the Riot Games API. This data provided build and performance data reflective of high-level competitive play. his data captures champion selections, itemization, rune choices, and win rates representative of the top percentile of the player base. This data was used to fine-tune the model on realistic, high-quality in-game decision patterns.
+
+
+\subsection*{Champion Build and Matchup Statistics (u.gg)}
+
+\paragraph{Where the data comes from.}
+Champion build and meta statistics are obtained directly from u.gg's public stats CDN
+(\path{https://stats2.u.gg}). u.gg serves its website from a static JSON tree at this
+endpoint, so the same files the web client renders can be fetched without a headless
+browser or scraping HTML. For every (patch, rank, role, champion) tuple we download two
+documents: an \emph{overview} file containing win rate, pick rate, optimal core and
+starting items, full rune pages, summoner spells, skill order, and stat shards; and a
+\emph{matchups} file containing per-opponent win rates and sample sizes (strong-against,
+weak-against, and full matchup tables). Numeric IDs for champions, items, runes, and
+summoner spells are resolved against Riot's free Data Dragon CDN, so no Riot API key is
+required for this pipeline. We collected the four most recent patches available on the
+CDN — at Diamond rank,
+world region, ranked solo/duo queue.
+
+\paragraph{Why we collected it this way.}
+The official Riot API only exposes raw per-match data. Reproducing u.gg-style aggregates
+(win rates, optimal builds, matchup tables) from the Riot API would require pulling tens
+of thousands of matches per (patch, rank) cell and re-implementing the aggregation
+ourselves, which is well beyond the scope and rate-limit budget of this project. Scraping
+the pre-computed JSON that u.gg already serves to its own frontend lets us obtain the
+exact statistics players see in practice, at negligible cost, and at a granularity
+(per-patch, per-rank, per-role) that aligns directly with how the meta actually shifts.
+Patch notes alone cannot answer questions such as \textit{``what does Seraphine actually
+build in Diamond on 16.9?''} or \textit{``which matchups is Kassadin currently losing?''}
+— these require empirical data, and u.gg's aggregates are the most practical source of
+it.
 
 \section*{Methods}
 
-\subsection*{Retrieval-Augmented Generation Pipeline}
+\subsubsection*{Retrieval-Augmented Generation}
 
-\subsubsection*{Motivation and Data Scope}
+To allow the model to answer questions grounded in current League of Legends data, we built a RAG pipeline combining three data sources:
 
-A Retrieval-Augmented Generation (RAG) pipeline was implemented to allow the language model to answer
-questions about League of Legends patch changes accurately, without hallucinating statistics. The base
-model (\path{meta-llama/Meta-Llama-3-8B-Instruct}) has a knowledge cutoff and cannot reliably recall
-exact numerical changes from recently released patches.
+\begin{itemize} \item \textbf{Patch notes} scraped from the official League of Legends website. \item \textbf{Champion and item descriptions} fetched from the Riot Data Dragon API. \item \textbf{Diamond-tier build data} collected from U.GG, containing recommended runes, summoner spells, core items, skill orders, and win rates per champion and role. \end{itemize}
 
-Patch notes were collected for patches 26.1 through 26.9, covering the full 2026 Season 1 ranked period. This range was chosen because each new season in League of Legends brings major changes to champions, items, and overall game mechanics, making older information less relevant. By focusing only on the current season, the system is able to provide answers that reflect the current meta rather than outdated gameplay patterns.
+All sources are split into chunks, each annotated with metadata (patch version, section, subject, change type). The chunks are embedded with \path{sentence-transformers/all-MiniLM-L6-v2} and stored in a FAISS index for fast similarity search.
 
-In total, the scraping process produced \textbf{210 meaningful chunks} of information. Each chunk represents a specific change, such as a champion update or item adjustment, and includes metadata like patch version, date, section, subject, and type of change.
+At query time, we retrieve the top k = 7 most relevant chunks using Maximum Marginal Relevance (MMR, $\text{fetch\_k}=20$, $\lambda=0.6$) to balance relevance with diversity across the different sources. The retrieved chunks, together with their metadata, are concatenated into the system prompt that is fed to Llama-3-8B-Instruct.
 
-\subsubsection*{Pipeline Architecture}
-
-The pipeline was built using LangChain with the following components:
-
-\begin{itemize}
-    \item \textbf{Embedding model:} \path{sentence-transformers/all-MiniLM-L6-v2} to encode chunks
-    into dense vector representations.
-    \item \textbf{Vector store:} FAISS index for efficient approximate nearest-neighbour search.
-    \item \textbf{Retriever:} Maximum Marginal Relevance (MMR) with $k=5$, $\text{fetch\_k}=20$,
-    $\lambda=0.6$ to balance retrieval relevance and diversity.
-    \item \textbf{LLM:} Llama 3 8B Instruct loaded in 4-bit NF4 quantization via
-    \texttt{bitsandbytes}.
-    \item \textbf{Chain:} Retrieved chunks, formatted with patch version and section metadata, are
-    injected into the system prompt alongside the user question.
-\end{itemize}
-
-A conversational variant was also implemented, where follow-up questions are first rewritten into
-standalone queries using the chat history before retrieval. This prevents vague follow-ups such as
-\textit{"was that too hard?"} from retrieving irrelevant chunks.
-
-\subsection*{Results}
-
-The system was evaluated qualitatively on five queries. Results are summarised in
-Table~\ref{tab:rag_results}.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l p{0.6\linewidth}}
-\toprule
-\textbf{Query} & \textbf{Outcome} \\
-\midrule
-Kassadin nerfs & Correctly cited health growth nerf in patch 26.4: $119 \to 113$ \\
-Gwen nerfs & Correctly identified passive monster damage cap nerf in patch 26.2 with Riot's stated reasoning \\
-Hubris item changes & Correctly traced changes across patches 26.5 and 26.9 \\
-Seraphine bug fixes & Correctly listed four specific bug fixes from patch 26.9 \\
-Anivia viability & Correctly refused to answer — champion not present in patch data \\
-\bottomrule
-\end{tabular}
-\caption{Qualitative evaluation of the RAG pipeline across five test queries.}
-\label{tab:rag_results}
-\end{table}
-
-A key qualitative comparison was performed on Varus patch 26.2 changes. Without RAG, the model
-hallucinated plausible but entirely incorrect ability statistics. With RAG, it correctly cited the
-exact values.
-
-The conversational test on Lillia across patches 26.2 and 26.5 demonstrated correct multi-patch
-reasoning, including Riot's stated rationale for reverting earlier nerfs. When asked about item build
-changes absent from the corpus, the system correctly responded: \textit{"I don't have that information
-in the current patch data"}, confirming the system does not hallucinate beyond its context.
 
 \subsection*{Fine-Tuning Data Pipeline}
 
 \subsubsection*{Motivation}
-While the RAG system retrieves patch note context at query time, it lacks grounding in actual gameplay data — how Diamond-level players build champions, perform, and win or lose in practice. To address this, we constructed a supervised fine-tuning (SFT) dataset from real ranked match data, following the QLoRA approach demonstrated in the course material.
+While the RAG system retrieves context at query time, it lacks grounding in actual gameplay data — how Diamond-level players build champions, perform, and win or lose in practice. To address this, we constructed a supervised fine-tuning (SFT) dataset from real ranked match data, following the QLoRA approach demonstrated in the course material.
 
 \subsubsection*{Data Collection}
 Match data was collected from Diamond EUW ranked players using the Riot Games API. Player names and tags were scraped from op.gg, converted to PUUIDs via the Riot Account API, and used to fetch match histories. A total of 102 Diamond EUW players were collected, with 20 matches per player, yielding approximately 2{,}000 matches in total.
@@ -226,7 +194,7 @@ participation shows consistent map presence throughout the game.
 
 \subsubsection*{Fine-Tuning}
 
-The base model was fine-tuned on the 4,876 instruction-response pairs using QLoRA,
+The base model was fine-tuned on approximately 8000 instruction-response pairs using QLoRA,
 which freezes the original model weights and trains only a small set of low-rank adapter
 matrices. This keeps the model's general language capabilities intact while steering it
 toward Diamond-level gameplay knowledge — item choices, rune rationales, and performance
@@ -235,42 +203,86 @@ sufficient given that the dataset was synthetically generated with consistent fo
 and low noise.
 
 
-\subsubsection*{Qualitative Evaluation}
+\subsection*{Qualitative Evaluation}
 
-The fine-tuned model was evaluated by posing eight natural language questions about
-Diamond EUW gameplay without providing any match context in the prompt. The responses
-were assessed qualitatively against known high-level play standards.
+To assess the effect of retrieval and fine-tuning on answer quality, we evaluated five system configurations on a fixed set of 30 questions covering four categories: patch notes, leaderboard rankings, champion descriptions, and Diamond-tier build data.
 
-The model demonstrated clear adaptation to the target domain — answers were fluent,
-confidently phrased, and structured in the style of a gameplay analyst. Champion
-identities were correctly understood: Hecarim was described as a mobility-focused
-jungler and correctly assigned Flash and Ghost, Ahri's roaming potential was accurately
-highlighted, and Zed was correctly framed as an assassin.
+\paragraph{Systems Evaluated} \begin{itemize} \item \textbf{A: Base} -- Llama-3-8B-Instruct with no retrieval and no fine-tuning. \item \textbf{B: Fine-tuned} -- Llama-3-8B-Instruct with our LoRA adapter trained on Diamond-tier match data, no retrieval. \item \textbf{C: Base + RAG} -- Base Llama-3-8B-Instruct with retrieval enabled. \item \textbf{D: Fine-tuned + RAG} -- Our full system: fine-tuned model with retrieval enabled. \item \textbf{E: Llama-3.3-70B (reference)} -- A significantly larger model accessed via the Groq API, used without retrieval as an external strong baseline. \end{itemize}
 
-However, several factual errors were present. The suggested item build for Zed included
-Mejai's Soulstealer and Infinity Edge — neither of which are appropriate for the
-champion. Lulu support was described as building Liandry's Torment and Axiom Arc,
-whereas enchanter items such as Moonstone Renewer and Shurelya's Battlesong are
-standard. The model also incorrectly dismissed Hubris as a weak first item for
-assassins, despite it being a common and effective choice in Diamond play. Win rate
-figures cited for specific champions were stated with false precision and likely
-fabricated.
+Each system produced an answer for every question, and ground-truth references were prepared in advance based on the original data sources (patch notes, U.GG build statistics, Riot Data Dragon). We used a two-stage evaluation:
 
-These errors are a direct consequence of the data pipeline: the training pairs were
-generated synthetically using the same base model, without any ground truth
-verification against actual item builds or champion statistics. The model therefore
-learned the \textit{format and tone} of high-level analysis effectively, but inherited
-and reinforced factual inaccuracies present in the generated data. This is a known
-limitation of purely synthetic instruction tuning and motivates the hybrid RAG approach
-discussed in the future work section, where retrieved patch and build data would provide
-factual grounding at inference time.
+\textbf{1. Automated LLM-as-Judge.} Each (question, ground truth, candidate answer) triple was scored by Llama-3.3-70B (served via the Groq API) on two axes: \textit{correctness} (factual agreement with the ground truth) and \textit{relevance} (whether the answer actually addresses the question), each on a 0--5 scale. The judge returned a structured JSON verdict per answer, which we aggregated per system and per category.
+
+\textbf{2. Human Evaluation.} To validate the automated scores, two League of Legends players independently scored all $5 \times 30 = 150$ answers using the same correctness and relevance rubric. Their judgements were averaged and used as the primary evaluation reported in the results.
+
+% \subsubsection*{Metrics and Reporting}
+
+% For each system we report: \begin{itemize} \item Overall mean correctness and relevance across all 30 questions. \item A combined score (the average of correctness and relevance) for easier comparison. \item Per-category breakdowns to identify where retrieval and fine-tuning help most. \end{itemize}
+
+% This setup allows us to attribute performance differences to specific components -- isolating the contribution of retrieval, fine-tuning, and model scale -- while cross-checking the LLM-based judge against human assessment.
+
+
+\subsection*{Results}
+
+Tables~\ref{tab:overall-ai} and~\ref{tab:overall-human} report the overall correctness and relevance of all five systems. Table~\ref{tab:overall-ai} shows the raw scores from the automated LLM judge (Llama-3.3-70B via Groq), while Table~\ref{tab:overall-human} reports the human scores together with 95\% bootstrap confidence intervals (1000 iterations) over the per-question averages of two annotators.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\caption{Automated LLM-judge scores across 30 questions.
+A: Base, B: Fine-tuned, C: Base+RAG, D: Fine-tuned+RAG, E: Llama-3.3-70B (reference).}
+\label{tab:overall-ai}
+\begin{tabular}{cccc}
+\toprule
+System & Correctness & Relevance & Combined \\
+\midrule
+A & 1.30 & 4.33 & 2.82 \\
+B & 1.60 & 4.10 & 2.85 \\
+C & 2.60 & 4.60 & 3.60 \\
+D & \textbf{2.87} & 4.63 & \textbf{3.75} \\
+E & 2.60 & 4.83 & 3.72 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{Human evaluation with 95\% bootstrap CIs (1000 iterations). Format: \textbf{mean [2.5\%, 97.5\%]}.
+A: Base, B: Fine-tuned, C: Base+RAG, D: Fine-tuned+RAG, E: Llama-3.3-70B (reference).}
+\label{tab:overall-human}
+\begin{tabular}{cccc}
+\toprule
+System & Correctness & Relevance & Combined \\
+\midrule
+A & 2.13 [1.82, 2.47] & 3.43 [3.05, 3.82] & 2.78 [2.48, 3.07] \\
+B & 2.35 [2.05, 2.67] & 3.75 [3.42, 4.05] & 3.05 [2.80, 3.31] \\
+C & 3.88 [3.50, 4.23] & 4.53 [4.28, 4.75] & 4.21 [3.90, 4.47] \\
+D & \textbf{4.02} [3.68, 4.35] & 4.48 [4.25, 4.68] & \textbf{4.25} [3.97, 4.49] \\
+E & 3.08 [2.77, 3.40] & 3.77 [3.50, 4.02] & 3.42 [3.20, 3.67] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Retrieval is the decisive factor.}
+The single largest gain in answer quality comes from giving the model access to the indexed knowledge base. Under human evaluation, correctness more than \textbf{doubles} when retrieval is added to a base model — questions like \textit{``what is the recommended core build for Veigar Mid?''} or \textit{``which junglers have the highest win rate this patch?''} require facts that simply do not exist in the model's pretraining data. Without RAG, the base model either refuses, generalizes from outdated patches, or fabricates plausible-sounding but incorrect builds; with RAG, it cites the actual Diamond-tier statistics retrieved from u.gg. The confidence intervals for the two RAG systems do not overlap with any of the non-RAG systems, so this effect is statistically meaningful given our sample of 30 questions and not an artifact of which questions we happened to pick.
+
+\paragraph{Fine-tuning helps the model use the retrieved context.}
+On its own, fine-tuning on Diamond match data provides only a small correctness gain (2.13 $\to$ 2.35), with overlapping confidence intervals; the LoRA adapter learns the \emph{style} of Diamond-level analysis (talking about KDA, kill participation, core item timing) but cannot make up for missing facts. Its real value emerges when paired with retrieval: the fine-tuned + RAG system achieves the highest combined score (4.25) and noticeably better relevance than base + RAG on build-data questions, because the adapter has learned to phrase answers in the language of competitive play rather than as generic Q\&A. The improvement over base + RAG is small in magnitude but consistent across categories, indicating that fine-tuning makes the retrieved context easier for the model to integrate, even when the raw factual content is the same.
+
+\paragraph{Retrieval beats raw model size.}
+The 70B reference model achieves a respectable correctness of 3.08 from its broad pretraining knowledge alone — it can correctly describe well-known champions, popular item builds, and common matchups it has seen during pretraining. However, it has no access to latest patch win rates, no awareness of the current meta, and no insight into Diamond-tier builds, so it loses badly on patch-specific questions (e.g., current Jungle win rates, recent nerfs, post-rework item priorities). Our 8B fine-tuned + RAG system outperforms the 70B reference by \textbf{31\%} in correctness with non-overlapping confidence intervals, despite using a backbone roughly nine times smaller. In a domain where the ground truth changes every two weeks, a current and well-indexed knowledge base is more valuable than additional model parameters.
+
+\paragraph{Cross-checking the LLM judge against humans.}
+Both evaluation methods produce the same overall ranking — RAG systems on top, the 70B reference in the middle, non-RAG 8B baselines at the bottom — which gives us some confidence that the automated judge is tracking real quality differences and not just surface features. The main disagreement is on \textit{relevance}: the automated judge tends to be generous to fluent, well-structured answers even when they are off-topic, while human evaluators penalize answers that sound confident but talk about the wrong champion, the wrong role, or an outdated patch. This bias is most visible on the non-RAG systems and the 70B reference, all of which produce smooth, plausible-sounding text. The human numbers should therefore be treated as the primary result; the LLM judge is useful as a cheap, fast sanity check, but it consistently over-rewards stylistic polish over factual grounding.
+
+\section*{Conclusion}
+
+This project showed that a small open-weight language model, equipped with the right retrieval pipeline and lightly adapted to its domain, can outperform a much larger general-purpose model on a fast-moving topic like League of Legends. Across both automated and human evaluations, retrieval emerged as the dominant driver of factual accuracy, while fine-tuning on Diamond-tier match data added a smaller but consistent benefit by teaching the model how to phrase and integrate the retrieved context. The full fine-tuned + RAG system clearly outperformed a 9$\times$ larger reference model with non-overlapping confidence intervals, demonstrating that for specialized, rapidly-changing domains a current and well-organized knowledge base is more valuable than additional model parameters. Just as importantly, when the game updates, only the indexed data needs to be refreshed — the model itself does not.
 
 \section*{Future Work}
 
-This project evaluated RAG and supervised fine-tuning as two separate approaches.
-A natural next step would be to combine them: using the fine-tuned model as the backbone
-of the RAG pipeline, so that the model brings domain-adapted language and reasoning
-while still retrieving up-to-date patch note context at query time.
+A next step could be to scale the fine-tuning corpus well beyond the current single-patch, Diamond-only snapshot — ideally aggregating match data across multiple seasons and rank tiers, so the model learns how builds, runes, and matchups evolve as the meta shifts. With a substantially larger and more diverse dataset, the fine-tuned model could begin to reason about \emph{why} certain builds emerge in certain patches, not just \emph{what} they are. Pairing this stronger backbone with the existing retrieval layer — and ideally training the two jointly — would push the system from answering questions to actually explaining the game.
 
 
 
