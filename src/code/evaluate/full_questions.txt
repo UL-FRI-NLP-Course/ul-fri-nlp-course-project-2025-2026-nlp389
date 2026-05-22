@@ -1,0 +1,34 @@
+# 30 evaluation questions for the LoL RAG system.
+# One question per line. Lines starting with # are ignored.
+# Question numbers correspond to ground_truth.json
+
+Which champion became viable in the jungle role?
+Which Top lane champion's win rate dropped after being nerfed?
+Which champions have a high win rate as a Support?
+What runes should I use for Kayle Top?
+What is the recommended first core item for Brand?
+What is the recommended skill order for Tristana ADC?
+Which support item is the best start for Yasuo Support?
+Which keystone from the Sorcery tree replaced Phase Rush?
+What is the recommended starting summoner spell combination for Yuumi?
+Which summoner spell is recommended for Top-lane Brand?
+Why is Pantheon considered a counter to Yasuo?
+What runes does Smolder ADC use in Diamond?
+What are the most popular core items for Top lane in Diamond?
+Why is Malphite considered a good pick against attack damage heavy champions?
+Which Jungle champions have the highest win rate this patch?
+Which rune setup is most effective for Ahri Mid?
+What is the best first item for Jinx ADC?
+What summoner spells are recommended for Darius Top?
+What is the most popular skill order for Ezreal ADC?
+What are the recommended boots for Katarina Mid?
+Why is Morgana considered a strong counter to crowd-control heavy teams?
+What is the recommended core build for Veigar Mid?
+Which rune setup works best for Leona Support?
+Why is Ornn considered a strong tank top laner?
+What is LeBlanc Mid's recommended core build in Diamond?
+What is the recommended core build for Darius Top?
+In which order should I scale abilities on Teemo Top?
+Why is Thresh considered a strong Support champion?
+What are the most popular core items for Mid lane in Diamond?
+Which top lane champions have the highest win rates this patch?
