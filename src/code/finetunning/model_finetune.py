@@ -9,7 +9,7 @@ from trl import SFTTrainer, SFTConfig
 from huggingface_hub import login
 import os
 
-HF_TOKEN = os.getenv("HF_API_KEY")
+HF_TOKEN = os.getenv("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")
 login(token=HF_TOKEN)
 
 MODEL_NAME = "meta-llama/Meta-Llama-3-8B-Instruct"

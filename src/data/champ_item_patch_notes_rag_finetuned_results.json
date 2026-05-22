@@ -1,0 +1,44 @@
+{
+  "kassadin_viability": {
+    "question": "Is Kassadin still strong in mid lane? What nerfs did he receive?",
+    "answer": "According to the patch notes, Kassadin received a health growth reduction from 119 to 113 in Patch 26.4. Additionally, his slow effect on his E - Force Pulse was adjusted to be slightly weaker, ranging from 50/55/60/65/70% instead of 50/60/70/80/90%. These changes aim to balance out his high late-game damage and mobile scaling fantasy while introducing some weaknesses."
+  },
+  "gwen_nerfs": {
+    "question": "What nerfs did Gwen receive across the 26.x patches and why?",
+    "answer": "Gwen received a nerf to her monster damage cap in Patch 26.2 Notes, specifically reducing it from 5 (+10% AP) to 3 (+5% AP). This change aimed to address her overperformance in the jungle role, ensuring she wasn't becoming too powerful against enemy jungles and camps."
+  },
+  "item_changes": {
+    "question": "What changes were made to Hubris and other items in the 26.x patches?",
+    "answer": "Hubris underwent significant changes across multiple patches. In Patch 26.9, its cost was adjusted to bring it more in line with other first-slot lethality items, aiming to differentiate it from immediate power spikes like Youmuu's Ghostblade. This change aimed to make Hubris stronger overall, especially when built consistently.\n\nIn Patch 26.5, further adjustments were made to Hubris, focusing on allowing assassins to scale their damage earlier. The goal was to let players get the \"snowball rolling\" sooner, particularly with Hubris. No specific numerical values were mentioned in the provided patch notes, but it seems that these changes aimed to improve the item's performance for assassins.\n\nNo notable changes were mentioned for other items besides Hubris in the provided patch notes. However, some general statements about other items can be inferred:\n\n* In Patch 26.2, Bandlepipes' popularity led to concerns about crowding out other support options, suggesting that their effectiveness might need to be balanced.\n* In Patch 26.3, Dusk and Dawn was considered \"too good\" at bursting and took up too much space from Lich Bane's niche, leading to a slight nerf. Additionally, Chainlaced Crushers had an unmentioned connection to Armored Thrifters, implying potential changes or interactions between these items."
+  },
+  "seraphine_bugfix": {
+    "question": "Are there any bug fixes related to Seraphine?",
+    "answer": "Yes, according to the patch notes, there were several bug fixes related to Seraphine in Patch 26.9. Specifically, they fixed issues with her Q not dealing damage to units walking towards the center of the area of effect, her R not extending when killing champions with zombie passives (such as Karthus or Sion), or revives, and her abilities not double-casting when she had the exact correct mana to cast them. These changes aimed to improve the overall performance and functionality of Seraphine's abilities."
+  },
+  "anivia_viability": {
+    "question": "Is Anivia viable right now? What changes did she receive?",
+    "answer": "Based on the provided patch notes, there are no mentions of any changes to Anivia's abilities or stats. However, since the patch notes only cover specific champion updates, it's possible that Anivia might have been affected by broader balance changes or bug fixes outside of these notes.\n\nTo determine Anivia's current viability, I would recommend checking recent professional matches, high-level player streams, or online forums to gather more information about her performance and any notable trends or strategies surrounding her playstyle."
+  },
+  "no_rag": {
+    "question": "What changed for Varus in League of Legends patch 26.2?",
+    "answer": "In Patch 26.2, Varus received a significant buff to his ultimate ability, \"Pulsefire Torch\", which now deals an additional 10-20 (based on level) bonus damage to champions who have been affected by its area-of-effect. This change aims to make Varus more effective at closing out fights with his ultimate."
+  },
+  "with_rag": {
+    "question": "What changed for Varus in League of Legends patch 26.2?",
+    "answer": "In Patch 26.2, Varus received an increase to his on-hit base damage, with values changing from 6/14/22/30/38 to 8/17/26/35/44. Additionally, his maximum charge base damage was increased, changing from 80/150/220/290/360 to 80/160/240/320/400. These changes aimed to boost Varus' performance in his two primary builds, on-hit and AD caster."
+  },
+  "conversation": [
+    {
+      "user": "What happened to Lillia across the recent patches?",
+      "bot": "According to the patch notes, Lillia received significant changes across multiple patches. In Patch 26.5, her passive \"Dream-Laden Bough\" had its monster heal bonus AP ratio increased from 9% to 15%, while her Q \"Blooming Blows\" gained an additional 5% bonus AP ratio, making it now 35%. Additionally, her ultimate ability \"Lilting Lullaby\" saw its base damage increase by 50% (from 100/150/200 to 150/200/250). These changes aimed to revert some previous buffs and nerfs, allowing Lillia to excel in sustained fights rather than relying on large-scale ultimate usage."
+    },
+    {
+      "user": "So was she nerfed too hard? What did Riot say about it?",
+      "bot": "According to the patch notes, Lillia was indeed nerfed quite significantly, particularly in Patch 26.2, where her healing against large monsters was reduced from 15% to 9% AP, and her Q's AP ratio decreased from 35% to 30%. This suggests that her sustain and damage output took a hit. However, in Patch 26.5, Riot decided to revert these changes, citing that they \"overshot\" Lillia's nerf and gave her too little room to shine. They aimed to restore her ultimate fantasy as a sustained fighter who excels at weaving in and out of fights with her Q."
+    },
+    {
+      "user": "What item or build changes in those patches might have affected her performance?",
+      "bot": "Based on the provided patch notes, there aren't any specific item or build changes mentioned that directly impacted Lillia's performance. The changes mentioned are all related to champion-specific balance updates, such as nerfs and buffs to her abilities and stats."
+    }
+  ]
+}

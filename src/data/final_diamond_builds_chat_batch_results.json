@@ -1,0 +1,167 @@
+[
+  {
+    "question": "Which champion became viable in the jungle role?",
+    "answer": "Based on the provided data, Olaf's win rate of 48.7% (8,873 matches) suggests that he has been a consistently strong pick in the jungle role across multiple patches, including patch 16_6. This indicates that Olaf has become a viable champion in the jungle role.",
+    "sources": [
+      "League of Legends Patch 26.4 Notes | Maokai | nerf",
+      " |  | diamond_build",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Which Top lane champion's win rate dropped after being nerfed?",
+    "answer": "Based on the provided data, it appears that Zed's win rate decreased due to the nerfs introduced in Patch 26.3. Specifically, his damage to monsters was reduced by 1.2x to 0.5x, which had an under 1% impact on his win rate initially, but ultimately led to a decrease in his overall performance.",
+    "sources": [
+      "Patch 26.3 Notes | Zed | nerf",
+      " |  | diamond_build",
+      "League of Legends Patch 26.6 Notes | Zaahen | nerf",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Which champions have a high win rate as a Support?",
+    "answer": "Based on the provided data, two champions with high win rates as a Support are Warwick (41.3%) and Ambessa (42.4%).",
+    "sources": [
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "What runes should I use for Kayle Top?",
+    "answer": "Based on the provided data, it seems that there is no record of a top lane build for Kayle in any patch version mentioned (16.6 or 16.8). However, we can look at other roles' builds to see if they provide any insights.\n\nIn the mid lane, Kayle uses a combination of Precision and Sorcery runes with primary runes being Press the Attack, Celerity, Gathering Storm, and Last Stand, along with secondary runes Absorb Life and Legend: Alacrity. This suggests that these rune paths might be suitable for an aggressive, attack-focused playstyle.\n\nFor top lane, you may want to consider a different approach, focusing more on survivability and crowd control. You could try using a combination of Precision and Inspiration runes with primary runes like Fleet Footwork, Cut Down, Biscuit Delivery, and Cosmic Insight, alongside secondary runes like Absorb Life and Legend: Alacrity. This setup would allow for some damage dealing while also providing utility through the inspiration runes.\n\nKeep in mind that this is just an educated guess based on available data, and actual performance may vary depending on your personal playstyle and team composition. It's always a good idea to experiment with different rune setups and strategies to find what works best for you.",
+    "sources": [
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "What is the recommended first core item for Brand?",
+    "answer": "Based on the provided build, the recommended first core item for Brand is Zaz'Zak's Realmspike. This item is listed as one of the core items in the build, indicating that it plays an important role in the champion's overall strategy.",
+    "sources": [
+      " | Galeforce | item",
+      " | Bandle Juice of Vitality | item",
+      " |  | diamond_build",
+      " | Super Mech Power Field | item",
+      " | The Golden Spatula | item"
+    ]
+  },
+  {
+    "question": "What support goes well with Tristana?",
+    "answer": "Based on the provided data, I'd recommend pairing Tristana with Lissandra as her support champion. In Patch 16_8, they formed a formidable duo, boasting a win rate of 36.6%. Their synergy likely stems from Tristana's ability to deal physical damage while Lissandra provides magical assistance through her ultimate, Arcane Comet. Additionally, Lissandra's armor reduction and crowd control can help keep enemies at bay, allowing Tristana to focus on taking them out with her explosive charge and rapid fire attacks.",
+    "sources": [
+      "Patch 26.1 Notes | Tristana | adjustment",
+      " | Tristana | champion",
+      " |  | diamond_build",
+      "League of Legends Patch 26.6 Notes | Lissandra | adjustment",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Which support item is the best start for Yasuo Support?",
+    "answer": "Based on the provided data, both builds start with Health Potion twice, which suggests that it's a crucial early-game item for Yasuo Support. However, since we're looking for the \"best\" start, let's analyze the rest of their builds.\n\nIn Patch 16_9, the top-performing build starts with Berserker's Greaves, followed by Bloodthorn and Kraken Slayer. This indicates that these items provide significant value early on. In contrast, Patch 16_6 and 16_7 builds opt for different paths, but neither starts with Berserker's Greaves.\n\nConsidering the patch notes and item builds, I would recommend starting with Berserker's Greaves as the primary support item for Yasuo in Patch 16_9. This allows for improved mobility and damage output, setting up Yasuo for success throughout the game.",
+    "sources": [
+      " |  | diamond_build",
+      " | Yasuo | champion",
+      " | Steel Tempest | item",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Which keystone from the Sorcery tree replaced Phase Rush?",
+    "answer": "According to the patch notes, there is no mention of replacing Phase Rush with another keystone in the Sorcery tree. In fact, Phase Rush was removed altogether in Patch 26.9 Notes. The new keystone introduced is called Deathfire Touch, which targets damage-over-time and sustained damage casters.",
+    "sources": [
+      " | Everfrost | item",
+      "League of Legends Patch 26.9 Notes | [REMOVED]Phase Rush | adjustment",
+      " |  | diamond_build",
+      "League of Legends Patch 26.9 Notes | [NEW]Deathfire Touch | adjustment",
+      " | Stormsurge | item"
+    ]
+  },
+  {
+    "question": "What is the recommended starting summoner spell combination for Yuumi?",
+    "answer": "Based on the provided patch notes, it appears that the recommended starting summoner spells for Yuumi are Exhaust and either Heal or Ignite, depending on the patch version. In Patch 16.8, Ignite was used, while in earlier versions (16.6) and later (16.9), Heal was chosen instead.",
+    "sources": [
+      " |  | diamond_build",
+      " | YuumiBot | item",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Which summoner spell is recommended for Top-lane Brand?",
+    "answer": "Based on the provided data, it appears that both Hwei and Nasus use Flash as their summoner spell, while Smolder uses Barrier. Since there is no specific information about Top-lane Brand, I'll assume you're asking about a general recommendation.\n\nIn general, Flash is a versatile summoner spell that can be used for both offense and defense, making it a popular choice among many players. However, if you're looking for a more defensive-oriented option, Barrier could provide additional protection for your champion. Ultimately, the choice between these two spells depends on your personal playstyle and the specific needs of your team.",
+    "sources": [
+      " | Top Lane Quest | item",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Why is Pantheon considered a counter to Yasuo?",
+    "answer": "Based on the provided patch notes, there is no direct indication that Pantheon is specifically considered a counter to Yasuo. However, we can analyze their abilities and playstyles to identify potential weaknesses.\n\nPantheon's abilities focus on dealing damage, stunning, and setting up ambushes, which could potentially disrupt Yasuo's high-damage dealing capabilities. Additionally, Pantheon's Aegis Assault makes him invulnerable to damage from the front, allowing him to stay safe while trading blows with Yasuo. This might give Pantheon an advantage in sustained team fights, especially if he can use his abilities effectively to keep Yasuo at bay.\n\nOn the other hand, Yasuo's abilities rely heavily on his mobility and ability to close the distance quickly. If Pantheon can manage to stay out of range or use his abilities to keep Yasuo away, he may be able to limit Yasuo's effectiveness.",
+    "sources": [
+      " | Yasuo | champion",
+      " | Pantheon | champion",
+      "Patch 26.1 Notes | Yasuo | adjustment",
+      " |  | diamond_build",
+      " | Wandering Storms | item"
+    ]
+  },
+  {
+    "question": "Which champion is a strong counter to Smolder ADC?",
+    "answer": "Based on the provided data, we can analyze the strengths and weaknesses of each champion to identify potential counters to Smolder ADC. Since Smolder relies heavily on his team for safety and has a vulnerable early game, I would recommend Warwick as a strong counter.",
+    "sources": [
+      " |  | diamond_build",
+      " | Smolder | champion",
+      " |  | diamond_build",
+      " |  | diamond_build",
+      " |  | diamond_build"
+    ]
+  },
+  {
+    "question": "Which new starting items were just introduced?",
+    "answer": "According to the provided patch notes, there is no information about new starting items being introduced. The starting items mentioned are Scorchclaw Pup and Health Potion for Brand, and Health Potion for both Brand and Nautilus. These items were likely already present in previous patches, as they are not marked with a specific patch number.",
+    "sources": [
+      " |  | diamond_build",
+      " | Prismatic Item | item",
+      " | Healthbar Splash: Orange | item",
+      " |  | diamond_build",
+      " | Healthbar Cleanup: Reset Color | item"
+    ]
+  },
+  {
+    "question": "Why is Malphite considered a good pick against attack damage heavy champions?",
+    "answer": "Malphite's ability to withstand physical damage is due to his passive, Granite Shield, which absorbs up to 10% of his maximum Health. This makes him relatively durable against attack damage-heavy champions. Additionally, his W - Ground Slam deals magic damage based on his Armor, which allows him to scale well into late-game situations where his opponents' attack damage may increase.",
+    "sources": [
+      "Patch 26.2 Notes | Malphite | nerf",
+      " | Malphite | champion",
+      " | Malzahar | champion",
+      " |  | diamond_build",
+      "Patch 26.3 Notes | Varus | nerf"
+    ]
+  },
+  {
+    "question": "Which Jungle champion has an extremely high ban rate?",
+    "answer": "Based on the provided data, it appears that Samira has a relatively high ban rate, with a win rate of 39.0% in the Diamond tier. However, without further information about the specific patch or season, I cannot determine if she is considered \"extremely high\" compared to other champions.",
+    "sources": [
+      "Patch 26.3 Notes | Zed | nerf",
+      " |  | diamond_build",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      "League of Legends Patch 26.4 Notes | Maokai | nerf",
+      "League of Legends Patch 26.6 Notes | Olaf | buff"
+    ]
+  }
+]

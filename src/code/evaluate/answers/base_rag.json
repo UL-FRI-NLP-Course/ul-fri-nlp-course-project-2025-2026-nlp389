@@ -1,0 +1,392 @@
+[
+  {
+    "question": "Which champion became viable in the jungle role?",
+    "answer": "Based on the provided data, Olaf received buffs in Patch 26.6, which aimed to improve his clear, ganking, and overall jungle performance. This suggests that Olaf became more viable in the jungle role after these changes.",
+    "sources": [
+      "16_9 | Most Played Jungle (jungle) | diamond_build",
+      "League of Legends Patch 26.4 Notes | Maokai | nerf",
+      "League of Legends Patch 26.5 Notes | Volibear | nerf",
+      "16_9 | Sylas (jungle) | diamond_build",
+      "League of Legends Patch 26.6 Notes | Olaf | buff",
+      "League of Legends Patch 26.6 Notes | Zaahen | nerf",
+      "16_9 | Keystones Jungle (jungle) | diamond_build"
+    ]
+  },
+  {
+    "question": "Which Top lane champion's win rate dropped after being nerfed?",
+    "answer": "According to the given information, Zed's win rate dropped after being nerfed in Patch 26.3 Notes. The nerf reduced his damage to monsters and maximum damage to epic monsters.",
+    "sources": [
+      "16_9 | Top WR Top (top) | diamond_build",
+      "Patch 26.3 Notes | Zed | nerf",
+      "Patch 26.3 Notes | Varus | nerf",
+      "16_9 | Naafiri (jungle) | diamond_build",
+      "16_9 | Top WR Jungle (jungle) | diamond_build",
+      "16_9 | Lowest WR ADC (adc) | diamond_build",
+      "League of Legends Patch 26.6 Notes | Zaahen | nerf"
+    ]
+  },
+  {
+    "question": "Which champions have a high win rate as a Support?",
+    "answer": "According to the provided data, the top 5 Support champions with the highest win rates in Diamond tier (Patch 16_9) are:\n\n1. Taric Support - 53.2% WR (23,837 matches)\n2. Milio Support - 52.6% WR (116,742 matches)\n3. Seraphine Support - 52.4% WR (276,061 matches)\n4. Sona Support - 52.2% WR (67,404 matches)\n5. Janna Support - 52.1% WR (37,730 matches)\n\nThese champions have a win rate above 52%, which indicates they are strong picks in their role.",
+    "sources": [
+      "16_9 | Top WR Support (support) | diamond_build",
+      "16_9 | Top WR Top (top) | diamond_build",
+      "16_9 | Garen (support) | diamond_build",
+      "16_9 | Most Played Support (support) | diamond_build",
+      "16_9 | Top WR ADC (adc) | diamond_build",
+      "16_9 | Lowest WR Support (support) | diamond_build",
+      "16_9 | Top WR Jungle (jungle) | diamond_build"
+    ]
+  },
+  {
+    "question": "What runes should I use for Kayle Top?",
+    "answer": "Based on the provided data, for Kayle Top in Patch 16.9, the recommended runes are:\n\n* Primary Runes: Press the Attack, Celerity, Gathering Storm, Last Stand\n* Secondary Runes: Absorb Life, Legend: Alacrity\n\nThese runes provide a mix of attack damage, attack speed, and ability power scaling, which suits Kayle's abilities and playstyle as a top laner.",
+    "sources": [
+      "16_9 | Keystones Top (top) | diamond_build",
+      "16_9 | Kayle (support) | diamond_build",
+      "16_9 | Corki (top) | diamond_build",
+      "16_9 | Shen (mid) | diamond_build",
+      "16_9 | Keystones Mid (mid) | diamond_build",
+      "16_9 | Kayle (top) | diamond_build",
+      "16_9 | Braum (support) | diamond_build"
+    ]
+  },
+  {
+    "question": "What is the recommended first core item for Brand?",
+    "answer": "Based on the provided data, there is no information about Brand's recommended first core item. The given data only includes the most popular core items for ADC champions in Diamond tier, but it doesn't specify which champion they are used with.",
+    "sources": [
+      "16_9 | Core Items ADC (adc) | diamond_build",
+      " | Bandle Juice of Vitality | item",
+      " | Galeforce | item",
+      " | Prismatic Item | item",
+      " | Locket of the Iron Solari | item",
+      "16_9 | Amumu (support) | diamond_build",
+      " | Serrated Dirk | item"
+    ]
+  },
+  {
+    "question": "What is the recommended skill order for Tristana ADC?",
+    "answer": "According to the provided data, the recommended skill order for Tristana ADC in patch 16.9 is:\n\nE -> W -> Q -> E -> E -> R -> E -> Q -> E -> Q -> R -> Q -> Q -> W -> W -> R -> W -> W\n\nThis skill order is based on the Diamond-tier build data for Tristana ADC in patch 16.9.",
+    "sources": [
+      "16_9 | Tristana (adc) | diamond_build",
+      "16_9 | Draven (adc) | diamond_build",
+      "16_9 | Senna (adc) | diamond_build",
+      "16_9 | Jarvan IV (adc) | diamond_build",
+      "16_9 | Samira (adc) | diamond_build",
+      "16_9 | Anivia (adc) | diamond_build",
+      "16_9 | Neeko (adc) | diamond_build"
+    ]
+  },
+  {
+    "question": "Which support item is the best start for Yasuo Support?",
+    "answer": "Based on the provided data, there is no specific support item mentioned as the best start for Yasuo Support. However, we can analyze the top 10 lowest win rate Support champions in Diamond (Patch 16_9) and see what items they use.\n\nAmong the top 10 lowest win rate Support champions, none of them use Steel Tempest as a starting item. Instead, most of them start with Health Potion, Health Potion, which is a common starting item for many supports.\n\nConsidering Yasuo's abilities and playstyle, a good starting item for him could be something that provides some form of sustain, such as a health-restoring item or an ability haste item. Based on the item pool, Seraph's Embrace seems like a viable option, providing both mana and ability haste. However, without further analysis or testing, it's difficult to determine the absolute best starting item for Yasuo Support.",
+    "sources": [
+      "16_9 | Yasuo (support) | diamond_build",
+      " | Yasuo | champion",
+      "Patch 26.1 Notes | Yasuo | adjustment",
+      " | Seraph's Embrace | item",
+      "16_9 | Lowest WR Support (support) | diamond_build",
+      " | Steel Tempest | item",
+      "16_9 | Quinn (support) | diamond_build"
+    ]
+  },
+  {
+    "question": "Which keystone from the Sorcery tree replaced Phase Rush?",
+    "answer": "According to the patch notes, the keystone that replaced Phase Rush is [NEW]Deathfire Touch.",
+    "sources": [
+      " | Everfrost | item",
+      "League of Legends Patch 26.9 Notes | [REMOVED]Phase Rush | adjustment",
+      "16_9 | Morgana (top) | diamond_build",
+      "League of Legends Patch 26.9 Notes | [NEW]Deathfire Touch | adjustment",
+      " | Stormsurge | item",
+      " | Gatling Bunny-Guns | item",
+      "League of Legends Patch 26.9 Notes | [NEW]Stormraider's Surge | adjustment"
+    ]
+  },
+  {
+    "question": "What is the recommended starting summoner spell combination for Yuumi?",
+    "answer": "Based on the given context, the recommended starting summoner spell combination for Yuumi is Exhaust and Heal.",
+    "sources": [
+      "16_9 | Yuumi (support) | diamond_build",
+      " | Yuumi | champion",
+      " | YuumiBot | item",
+      " | Actualizer | item",
+      " | Bami's Cinder | item",
+      " | Essence Reaver | item",
+      " | Manamune | item"
+    ]
+  },
+  {
+    "question": "Which summoner spell is recommended for Top-lane Brand?",
+    "answer": "Based on the given context, there is no specific information about Top-lane Brand. However, since Brand is an attack damage carry (ADC) champion typically played in the bot lane, it's unlikely they would be playing in the top lane. The summoner spells mentioned are mostly focused on supports, which are usually played in the top lane. \n\nIf you meant to ask about a different champion, please provide more context or clarify the question.",
+    "sources": [
+      " | Top Lane Quest | item",
+      " | Bloodletter's Curse | item",
+      "16_9 | Smolder (support) | diamond_build",
+      "16_9 | Nasus (support) | diamond_build",
+      "16_9 | Sona (support) | diamond_build",
+      "16_9 | Lulu (mid) | diamond_build",
+      "16_9 | Nidalee (support) | diamond_build"
+    ]
+  },
+  {
+    "question": "Why is Pantheon considered a counter to Yasuo?",
+    "answer": "According to the tips when playing against Yasuo, Pantheon is considered a counter because:\n\n* \"Yasuo is at his weakest just after he has launched a whirlwind. Engage at that point.\"\n* \"Wait [Pantheon] out, then engage.\"\n\nThis suggests that Pantheon's ability to withstand Yasuo's whirlwind (Aegis Assault) and then quickly engaging him after the whirlwind ends makes him a good counter to Yasuo.",
+    "sources": [
+      " | Yasuo | champion",
+      " | Pantheon | champion",
+      " | Everfrost | item",
+      "Patch 26.1 Notes | Yasuo | adjustment",
+      "16_9 | Lowest WR Support (support) | diamond_build",
+      " | Nasus | champion",
+      " | Wandering Storms | item"
+    ]
+  },
+  {
+    "question": "What runes does Smolder ADC use in Diamond?",
+    "answer": "According to the provided data, Smolder ADC uses the following runes in Diamond:\n\n* Primary Runes: Deathfire Touch, Celerity, Gathering Storm, Nimbus Cloak\n* Secondary Runes: Magical Footwear, Jack Of All Trades",
+    "sources": [
+      "16_9 | Keystones ADC (adc) | diamond_build",
+      "16_9 | Smolder (adc) | diamond_build",
+      "16_9 | Akshan (adc) | diamond_build",
+      "16_9 | Fizz (adc) | diamond_build",
+      "16_9 | Tristana (adc) | diamond_build",
+      "16_9 | Malphite (adc) | diamond_build",
+      "16_9 | Nami (adc) | diamond_build"
+    ]
+  },
+  {
+    "question": "What are the most popular core items for Top lane in Diamond?",
+    "answer": "According to the patch 16_9 data, the top 5 most popular core items for Top lane in Diamond are:\n\n1. Berserker's Greaves - built in 471,663 matches\n2. Voltaic Cyclosword - built in 471,843 matches\n3. Blackfire Torch - built in 638,530 matches\n4. Stormsurge - built in 438,493 matches\n5. Blade of The Ruined King - built in 640,847 matches",
+    "sources": [
+      "16_9 | Core Items Mid (mid) | diamond_build",
+      "16_9 | Keystones Top (top) | diamond_build",
+      "16_9 | Jax (jungle) | diamond_build",
+      "16_9 | Core Items Jungle (jungle) | diamond_build",
+      "16_9 | Gangplank (mid) | diamond_build",
+      "16_9 | Core Items ADC (adc) | diamond_build",
+      "16_9 | Keystones Mid (mid) | diamond_build"
+    ]
+  },
+  {
+    "question": "Why is Malphite considered a good pick against attack damage heavy champions?",
+    "answer": "According to the provided context, Malphite's abilities scale on Armor, which makes him a good pick against attack damage (AD) heavy champions. Specifically, his Ground Slam ability reduces the Attack Speed of enemies, making it harder for AD carries to deal damage. Additionally, his Granite Shield passive absorbs damage up to 10% of his maximum Health, which can help mitigate the damage dealt by AD champions.",
+    "sources": [
+      "Patch 26.2 Notes | Malphite | nerf",
+      " | Malphite | champion",
+      "League of Legends Patch 26.4 Notes | Senna | adjustment",
+      "16_9 | Top WR Top (top) | diamond_build",
+      " | Malzahar | champion",
+      "Patch 26.2 Notes | Smolder | nerf",
+      " | Rengar | champion"
+    ]
+  },
+  {
+    "question": "Which Jungle champions have the highest win rate this patch?",
+    "answer": "According to the provided data, the top 5 Jungle champions with the highest win rate in Diamond tier for Patch 16_9 are:\n\n1. Shyvana Jungle - 53.9% WR (191,481 matches)\n2. Rammus Jungle - 52.7% WR (61,810 matches)\n3. Mordekaiser Jungle - 52.6% WR (14,017 matches)\n4. Briar Jungle - 52.3% WR (144,308 matches)\n5. Sion Jungle - 52.1% WR (5,195 matches)\n\nThese champions have demonstrated exceptional performance in the Jungle role, with win rates above 52%.",
+    "sources": [
+      "16_9 | Top WR Jungle (jungle) | diamond_build",
+      "16_9 | Quinn (jungle) | diamond_build",
+      "16_9 | Lowest WR Jungle (jungle) | diamond_build",
+      "16_9 | Lowest WR ADC (adc) | diamond_build",
+      "16_9 | Most Played Jungle (jungle) | diamond_build",
+      "16_9 | Top WR Support (support) | diamond_build",
+      "16_9 | Lowest WR Top (top) | diamond_build"
+    ]
+  },
+  {
+    "question": "Which rune setup is most effective for Ahri Mid?",
+    "answer": "Based on the given data, the most popular rune setup for Ahri Mid in Diamond tier is:\n\nDomination + Inspiration\n\nSpecifically, the primary runes used are:\n\n* Electrocute\n* Ultimate Hunter\n* Taste of Blood\n* Grisly Mementos\n\nThis rune setup seems to be effective for Ahri Mid, considering its popularity among high-level players in Diamond tier.",
+    "sources": [
+      "16_9 | Keystones Mid (mid) | diamond_build",
+      " | Ahri | champion",
+      "16_9 | Ahri (adc) | diamond_build",
+      "16_9 | Keystones Top (top) | diamond_build",
+      "16_9 | Akshan (support) | diamond_build",
+      "16_9 | Illaoi (support) | diamond_build",
+      "16_9 | Evelynn (jungle) | diamond_build"
+    ]
+  },
+  {
+    "question": "What is the best first item for Jinx ADC?",
+    "answer": "Based on the given context, the best first item for Jinx ADC in Patch 16_9 would be Doran's Blade. This is mentioned in the \"Diamond Build\" section, where it is listed as part of Jinx's starting items.",
+    "sources": [
+      "16_9 | Jinx (adc) | diamond_build",
+      "Patch 26.1 Notes | Jinx | adjustment",
+      " | Jinx's Tri-Namite | item",
+      " | Jinx | champion",
+      "16_9 | Lowest WR ADC (adc) | diamond_build",
+      " | Battle Cat Barrage | item",
+      "16_9 | Xin Zhao (adc) | diamond_build"
+    ]
+  },
+  {
+    "question": "What summoner spells are recommended for Darius Top?",
+    "answer": "Based on the provided context, the recommended summoner spells for Darius Top are:\n\n* Flash\n* Ghost\n\nThese summoner spells are commonly used by top laners, including Darius, to provide additional mobility and utility in lane. Flash allows for quick repositioning and escaping, while Ghost increases movement speed and reduces damage taken while moving.",
+    "sources": [
+      "16_9 | Darius (support) | diamond_build",
+      " | Darius | champion",
+      "16_9 | Nasus (support) | diamond_build",
+      "16_9 | Nidalee (support) | diamond_build",
+      "16_9 | Smolder (support) | diamond_build",
+      "16_9 | Viktor (support) | diamond_build",
+      "16_9 | Darius (jungle) | diamond_build"
+    ]
+  },
+  {
+    "question": "What is the most popular skill order for Ezreal ADC?",
+    "answer": "Based on the provided data, the most popular skill order for Ezreal ADC in Diamond tier (Patch 16_9) is:\n\nQ -> E -> W -> Q -> Q -> R -> Q -> E -> Q -> E -> R -> E -> E -> W -> W -> R -> W -> W\n\nThis skill order is based on the data from 366,798 matches.",
+    "sources": [
+      "16_9 | Top WR ADC (adc) | diamond_build",
+      "Patch 26.3 Notes | Ezreal | buff",
+      "16_9 | Ezreal (adc) | diamond_build",
+      "16_9 | Lowest WR ADC (adc) | diamond_build",
+      "16_9 | Most Played ADC (adc) | diamond_build",
+      "16_9 | Master Yi (adc) | diamond_build",
+      "16_9 | Xin Zhao (adc) | diamond_build"
+    ]
+  },
+  {
+    "question": "What are the recommended boots for Katarina Mid?",
+    "answer": "Based on the provided context, there is no specific recommendation for boots for Katarina Mid. However, according to the patch notes, [NEW]Gluttonous Greaves were added to provide omnivamp, which could be suitable for Katarina, especially since she is an assassin/mage champion.\n\nIn the past, Katarina was often built with Ionian Boots of Lucidity, which provided ability haste and attack speed. However, with the introduction of [NEW]Gluttonous Greaves, it might be worth considering those instead, especially if you're looking for a more aggressive playstyle.\n\nKeep in mind that build recommendations can vary depending on the player's playstyle and the meta. It's always a good idea to experiment and find what works best for you.",
+    "sources": [
+      "League of Legends Patch 26.9 Notes | [NEW]Gluttonous Greaves | adjustment",
+      " | Katarina | champion",
+      " | Jarvan I's | item",
+      "Patch 26.3 Notes | Armored Advance | adjustment",
+      "16_9 | Core Items ADC (adc) | diamond_build",
+      "16_9 | Katarina (support) | diamond_build",
+      " | Slightly Magical Footwear | item"
+    ]
+  },
+  {
+    "question": "Why is Morgana considered a strong counter to crowd-control heavy teams?",
+    "answer": "Morgana is considered a strong counter to crowd-control heavy teams because of her abilities, particularly her Black Shield and Soul Shackles. Here's why:\n\n1. **Black Shield**: Morgana's Black Shield provides a protective barrier around an allied champion, absorbing magical damage and disabling effects. This allows the shielded champion to avoid being affected by crowd-control abilities, such as stuns, slows, or roots, while still allowing them to attack and move freely.\n2. **Soul Shackles**: Morgana's Soul Shackles ability can latch onto multiple enemy champions, slowing and damaging them. While the shackles are active, the affected champions are unable to break free, making it difficult for them to escape or reposition themselves. This can create opportunities for Morgana's allies to take advantage of the slowed and damaged enemies.\n3. **Combination of abilities**: When used together, Morgana's Black Shield and Soul Shackles can create a powerful synergy. By shielding an ally, Morgana can protect them from crowd-control effects, allowing them to stay in position and continue attacking. Meanwhile, her Soul Shackles can keep enemy champions slowed and damaged, making it easier for her allies to focus fire on them.\n\nOverall, Morgana's kit is designed to disrupt and control enemy movements, making her a formidable opponent against teams that rely heavily on crowd-control abilities. Her abilities can help her allies maintain positioning and pressure, while hindering the enemy team's ability to respond effectively.",
+    "sources": [
+      " | Morgana | champion",
+      "League of Legends Patch 26.5 Notes | Kha’Zix | nerf",
+      "16_9 | Most Played Support (support) | diamond_build",
+      "League of Legends Patch 26.7 Notes | Cassiopeia | adjustment",
+      "League of Legends Patch 26.7 Notes | Ornn | adjustment",
+      "League of Legends Patch 26.4 Notes | Lux | buff",
+      "League of Legends Patch 26.8 Notes | Tahm Kench | adjustment"
+    ]
+  },
+  {
+    "question": "What is the recommended core build for Veigar Mid?",
+    "answer": "Based on the most popular core items for Mid in Diamond tier (Patch 16_9), the top three items are:\n\n1. Sorcerer's Shoes\n2. Shadowflame\n3. Luden's Echo\n\nThese items provide a good balance of ability haste, magic penetration, and adaptive force, which are essential for a mid laner like Veigar. Additionally, they offer a mix of damage, survivability, and utility, making them well-rounded choices for a mid laner.\n\nKeep in mind that item builds can vary depending on personal preference, playstyle, and the specific patch. However, based on the data, these three items are the most popular among Diamond-tier mid laners in Patch 16_9.",
+    "sources": [
+      "16_9 | Core Items Mid (mid) | diamond_build",
+      "League of Legends Patch 26.7 Notes | Veigar | buff",
+      " | Gambler's Blade | item",
+      "Patch 26.2 Notes | Smolder | nerf",
+      "League of Legends Patch 26.4 Notes | Udyr | nerf",
+      " | Veigar's Talisman of Ascension | item",
+      " | Veigar | champion"
+    ]
+  },
+  {
+    "question": "Which rune setup works best for Leona Support?",
+    "answer": "According to the provided data, the most popular rune setup for Leona Support in Diamond tier during patch 16.9 is:\n\nResolve + Precision\n\nSpecifically, the primary runes used are:\n\n* Aftershock\n* Second Wind\n* Overgrowth\n* Font of Life\n\nAnd secondary runes are:\n\n* Legend: Haste\n* Triumph\n\nThis rune setup seems to be effective for Leona Support, with a win rate of 50.9%.",
+    "sources": [
+      "16_9 | Leona (support) | diamond_build",
+      "16_9 | Keystones Support (support) | diamond_build",
+      "16_9 | Caitlyn (support) | diamond_build",
+      "16_9 | Nasus (support) | diamond_build",
+      "16_9 | Lissandra (support) | diamond_build",
+      "16_9 | Yuumi (support) | diamond_build",
+      "16_9 | Zyra (mid) | diamond_build"
+    ]
+  },
+  {
+    "question": "Why is Ornn considered a strong tank top laner?",
+    "answer": "According to the given context, Ornn is considered a strong tank top laner due to his abilities and playstyle. Specifically:\n\n* His passive, \"Living Forge\", allows him to gain additional armor and magic resist from all sources, making him more durable and resistant to damage.\n* His abilities, such as \"Volcanic Rupture\" and \"Call of the Forge God\", provide crowd control and zone control, making it difficult for enemies to approach him.\n* His ultimate ability, \"Call of the Forge God\", also allows him to deal damage and slow enemies, making it easier for him to kite and manage enemy movements.\n\nAdditionally, the patch notes mention that Ornn's changes were intended to open up weaknesses in his early game, implying that he was already quite powerful before the adjustments. Overall, Ornn's unique combination of survivability, crowd control, and damage-dealing capabilities make him a formidable opponent in the top lane.",
+    "sources": [
+      "League of Legends Patch 26.7 Notes | Ornn | adjustment",
+      "League of Legends Patch 26.5 Notes | Orianna | buff",
+      "16_9 | Top WR Top (top) | diamond_build",
+      " | Ornn | champion",
+      "League of Legends Patch 26.6 Notes | Olaf | buff",
+      " | Renekton | champion",
+      "Patch 26.3 Notes | Varus | nerf"
+    ]
+  },
+  {
+    "question": "What is LeBlanc Mid's recommended core build in Diamond?",
+    "answer": "According to the provided data, LeBlanc's recommended core build in Diamond is:\n\n* Starting Items: Health Potion, Health Potion\n* Core Build: Zaz'Zak's Realmspike, Stormsurge, Sorcerer's Shoes\n\nNote that this build is specifically for LeBlanc as a mid laner, which is indicated by the \"Mid\" label in the original text.",
+    "sources": [
+      "16_9 | Core Items Mid (mid) | diamond_build",
+      " | LeBlanc | champion",
+      "16_9 | Keystones Mid (mid) | diamond_build",
+      "16_9 | LeBlanc (support) | diamond_build",
+      "16_9 | Most Played Support (support) | diamond_build",
+      "16_9 | Core Items Jungle (jungle) | diamond_build",
+      "16_9 | Core Items ADC (adc) | diamond_build"
+    ]
+  },
+  {
+    "question": "What is the recommended core build for Darius Top?",
+    "answer": "Based on the provided data, the recommended core build for Darius Top in Diamond tier (Patch 16_9) is:\n\n* Starting Items: Gustwalker Hatchling\n* Core Build: Youmuu's Ghostblade, Boots of Swiftness, Dead Man's Plate\n\nThis build is based on the most popular runes and items used by Darius Top players in Diamond tier. However, please note that builds can vary depending on personal playstyle and preferences.",
+    "sources": [
+      "16_9 | Core Items Mid (mid) | diamond_build",
+      " | Darius | champion",
+      "Patch 26.3 Notes | Varus | nerf",
+      "16_9 | Most Played Top (top) | diamond_build",
+      "16_9 | Darius (jungle) | diamond_build",
+      "16_9 | Keystones Top (top) | diamond_build",
+      " | Alistar | champion"
+    ]
+  },
+  {
+    "question": "In which order should I scale abilities on Teemo Top?",
+    "answer": "Based on the provided build data, the recommended ability scaling order for Teemo Top in Patch 16_9 is:\n\nE -> Q -> W -> E -> E -> R -> E -> Q -> E -> Q -> R -> Q -> Q -> W -> W -> R -> W -> W\n\nThis order prioritizes leveling up Teemo's E (Toxic Shot) first, followed by Q (Blinding Dart), then W (Move Quick). This allows Teemo to deal more damage and control the battlefield early on. The rest of the abilities are leveled up in a way that balances Teemo's damage, mobility, and utility throughout the game.",
+    "sources": [
+      " | Teemo | champion",
+      "Patch 26.1 Notes | Nilah | nerf",
+      "16_9 | Teemo (top) | diamond_build",
+      "League of Legends Patch 26.9 Notes | Teemo | buff",
+      "League of Legends Patch 26.4 Notes | Kassadin | nerf",
+      "Patch 26.1 Notes | Tristana | adjustment",
+      "League of Legends Patch 26.4 Notes | Teemo | adjustment"
+    ]
+  },
+  {
+    "question": "Why is Thresh considered a strong Support champion?",
+    "answer": "According to the provided data, Thresh is not necessarily considered a strong Support champion. In fact, the top 10 lowest win rate Support champions in Diamond tier (Patch 16.9) list shows that Thresh is not even included, which suggests that he might be struggling in the current meta.\n\nHowever, considering his abilities and playstyle, Thresh can be a formidable Support champion in the right hands. His abilities, such as Death Sentence, Dark Passage, and Flay, provide utility and crowd control, allowing him to set up ambushes and protect his allies. Additionally, his passive, Damnation, allows him to farm souls and gain armor and ability power, making him a formidable opponent in team fights.\n\nTo become a strong Support champion, Thresh players need to master his kit and coordinate with their team effectively. They must learn to use his abilities to zone enemies, protect their carries, and set up ambushes. With practice and experience, Thresh can be a valuable asset to any team.",
+    "sources": [
+      " | Thresh | champion",
+      "16_9 | Lowest WR Support (support) | diamond_build",
+      "Patch 26.3 Notes | Trundle | buff",
+      "League of Legends Patch 26.5 Notes | Azir | nerf",
+      "League of Legends Patch 26.4 Notes | Hwei | adjustment",
+      " | Tahm Kench | champion",
+      " | Sivir | champion"
+    ]
+  },
+  {
+    "question": "What are the most popular core items for Mid lane in Diamond?",
+    "answer": "According to the patch 16_9 data, the most popular core items for Mid lane in Diamond are:\n\n1. Sorcerer's Shoes - built in 2,798,160 matches\n2. Shadowflame - built in 1,163,674 matches\n3. Luden's Echo - built in 990,195 matches\n4. Gluttonous Greaves - built in 723,661 matches\n5. Blade of The Ruined King - built in 640,847 matches\n6. Blackfire Torch - built in 638,530 matches\n7. Liandry's Torment - built in 587,937 matches\n8. Voltaic Cyclosword - built in 471,843 matches\n9. Berserker's Greaves - built in 471,663 matches\n10. Stormsurge - built in 438,493 matches",
+    "sources": [
+      "16_9 | Core Items Mid (mid) | diamond_build",
+      "16_9 | Keystones Mid (mid) | diamond_build",
+      "16_9 | Jax (jungle) | diamond_build",
+      "16_9 | Core Items Jungle (jungle) | diamond_build",
+      "16_9 | Gangplank (mid) | diamond_build",
+      "16_9 | Keystones Top (top) | diamond_build",
+      "16_9 | Braum (top) | diamond_build"
+    ]
+  },
+  {
+    "question": "Which top lane champions have the highest win rates this patch?",
+    "answer": "According to the provided data, the top 5 highest win rate top lane champions in Diamond tier for patch 16_9 are:\n\n1. Zilean Top - 53.8% WR (1,175 matches)\n2. Singed Top - 52.7% WR (55,784 matches)\n3. Naafiri Top - 52.3% WR (16,876 matches)\n4. Garen Top - 52.1% WR (232,009 matches)\n5. Zed Top - 52.1% WR (7,892 matches)\n\nThese champions have the highest win rates among all top lane champions in Diamond tier for patch 16_9.",
+    "sources": [
+      "16_9 | Top WR Top (top) | diamond_build",
+      "16_9 | Samira (adc) | diamond_build",
+      "16_9 | Top WR Jungle (jungle) | diamond_build",
+      "16_9 | Top WR Support (support) | diamond_build",
+      "16_9 | Lowest WR ADC (adc) | diamond_build",
+      "16_9 | Lowest WR Mid (mid) | diamond_build",
+      "16_9 | Lowest WR Top (top) | diamond_build"
+    ]
+  }
+]

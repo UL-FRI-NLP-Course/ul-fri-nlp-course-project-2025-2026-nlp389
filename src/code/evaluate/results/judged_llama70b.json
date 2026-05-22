@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "category": "patch_notes",
+    "question": "Which champion became viable in the jungle role?",
+    "ground_truth": "Shyvana saw a noticeable rise in win and pick rate as a jungler due to buffs in patch 16.9. She has the highest win rate among Diamond junglers in this patch.",
+    "answer": "Sejuani is a champion that became viable in the jungle role due to various balance changes and updates. However, another notable example is Viego, who was specifically designed and reworked to be a jungle champion. His rework made him a strong and viable pick in the jungle role.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer mentions other champions but not the specific one that became viable in the given context."
+  },
+  {
+    "id": 2,
+    "category": "patch_notes",
+    "question": "Which Top lane champion's win rate dropped after being nerfed?",
+    "ground_truth": "Ambessa experienced a noticeable drop in win rate after being nerfed in recent patches.",
+    "answer": "One notable example is Darius. He has been nerfed multiple times due to his high win rate, and after these nerfs, his win rate dropped significantly. However, please note that win rates can fluctuate with each patch, and the current patch data may be different.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer provides a relevant example but incorrect champion."
+  },
+  {
+    "id": 3,
+    "category": "leaderboard",
+    "question": "Which champions have a high win rate as a Support?",
+    "ground_truth": "Champions with the highest win rates as Support in Diamond include Taric (53.2%), Milio (52.6%), Seraphine (52.4%), Sona, Janna, Brand, Soraka, and Nami.",
+    "answer": "As of my last update, some of the top Support champions with high win rates in League of Legends include:\n\n1. Leona (around 52-53% win rate) - known for her aggressive and tanky playstyle.\n2. Nami (around 51-52% win rate) - excels at providing utility and crowd control.\n3. Janna (around 51% win rate) - offers strong protection and zoning capabilities.\n4. Thresh (around 50-51% win rate) - a versatile champion with a mix of crowd control and protection.\n5. Lulu (around 50% win rate) - provides a balance of utility, protection, and damage.\n\nPlease note that win rates can fluctuate with patch updates and balance changes. These figures are approximate and based on general trends.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer lists some correct Support champions but with mostly incorrect win rates and missing top champions like Taric and Milio."
+  },
+  {
+    "id": 4,
+    "category": "build_data",
+    "question": "What runes should I use for Kayle Top?",
+    "ground_truth": "Kayle Top uses Precision as the primary tree with Press the Attack as the keystone. Sorcery is the secondary tree. This setup amplifies damage and provides attack speed.",
+    "answer": "For Kayle Top, a common rune setup is:\n\n* Primary Path: Precision (Keystone: Conqueror)\n* Secondary Path: Resolve (Domination is also viable)\n* Shards: Attack Speed, Armor, Scaling Health\n\nThis setup provides Kayle with the necessary damage, sustain, and survivability to excel in the top lane. However, rune setups can vary depending on playstyle and the current meta.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer provides a rune setup for Kayle Top, but it does not match the ground-truth facts."
+  },
+  {
+    "id": 5,
+    "category": "build_data",
+    "question": "What is the recommended first core item for Brand?",
+    "ground_truth": "Strong first core items for Brand include Liandry's Torment, Blackfire Torch, or Rylai's Crystal Scepter, depending on the matchup.",
+    "answer": "The recommended first core item for Brand is typically Doran's Ring, as it provides ability power, health, and mana regeneration, which helps Brand to sustain in lane and deal damage effectively.",
+    "correctness": 1,
+    "relevance": 5,
+    "reason": "The answer is almost entirely wrong as it recommends Doran's Ring instead of Liandry's Torment, Blackfire Torch, or Rylai's Crystal Scepter."
+  },
+  {
+    "id": 6,
+    "category": "build_data",
+    "question": "What is the recommended skill order for Tristana ADC?",
+    "ground_truth": "Tristana ADC maxes E (Explosive Charge) first, then W (Rocket Jump), then Q (Rapid Fire). Skill priority: EWQ.",
+    "answer": "The recommended skill order for Tristana ADC is:\n\n1. Q (Rapid Fire) at level 1\n2. W (Rocket Jump) at level 2\n3. E (Explosive Charge) at level 3\n4. Q (Rapid Fire) at level 4\n5. W (Rocket Jump) at level 5\n6. R (Buster Shot) at level 6\n7. Q (Rapid Fire) at level 7\n8. E (Explosive Charge) at level 8\n9. W (Rocket Jump) at level 9\n10. Q (Rapid Fire) at level 10\n11. E (Explosive Charge) at level 11\n12. W (Rocket Jump) at level 12\n13. E (Explosive Charge) at level 13\n14. W (Rocket Jump) at level 14\n15. R (Buster Shot) at level 16\n16. E (Explosive Charge) at level 17\n17. W (Rocket Jump) at level 18\n\nHowever, a simplified version is:\n- Max Q (Rapid Fire) first for attack damage and attack speed\n- Max E (Explosive Charge) second for burst damage\n- Max W (Rocket Jump) last for mobility and utility\n- Take R (Buster Shot) whenever available (levels 6, 11, 16)",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer provides a skill order, but it does not match the ground-truth priority of EWQ."
+  },
+  {
+    "id": 7,
+    "category": "build_data",
+    "question": "Which support item is the best start for Yasuo Support?",
+    "ground_truth": "Yasuo Support typically starts with two Health Potions. A good support item is Bloodsong or Bloodsurge, which amplifies basic attack damage based on AD after using an ability.",
+    "answer": "For Yasuo Support, the best starting item is typically Spellthief's Edge. This item provides gold income, ability haste, and damage, which complements Yasuo's aggressive support playstyle.",
+    "correctness": 1,
+    "relevance": 5,
+    "reason": "The answer suggests Spellthief's Edge, which is not the recommended starting item for Yasuo Support."
+  },
+  {
+    "id": 8,
+    "category": "patch_notes",
+    "question": "Which keystone from the Sorcery tree replaced Phase Rush?",
+    "ground_truth": "Phase Rush was replaced by Stormraider's Surge (or Deathfire Touch in some patches), which provides a movement speed buff after dealing significant damage.",
+    "answer": "First Strike replaced Phase Rush as a keystone in the Inspiration tree, but in the Sorcery tree, First Strike is not available. However, in the Sorcery tree, Phase Rush was replaced by Nullifying Orb's removal and the introduction of other options, but the closest replacement would be Arcane Comet or other options depending on the champion.",
+    "correctness": 2,
+    "relevance": 4,
+    "reason": "The answer mentions the wrong replacement keystone and introduces irrelevant information about other trees and options."
+  },
+  {
+    "id": 9,
+    "category": "build_data",
+    "question": "What is the recommended starting summoner spell combination for Yuumi?",
+    "ground_truth": "The recommended summoner spells for Yuumi are Exhaust + Heal. A more aggressive option is Exhaust + Ignite.",
+    "answer": "The recommended starting summoner spell combination for Yuumi is Smite and Exhaust, or Smite and Ignite, but since Yuumi is a support champion, the most common combination is Exhaust and Flash, or Ignite and Flash, but Smite is not typically used on Yuumi. The most common is Exhaust and Flash.",
+    "correctness": 1,
+    "relevance": 4,
+    "reason": "The answer does not match the recommended summoner spell combination for Yuumi."
+  },
+  {
+    "id": 10,
+    "category": "build_data",
+    "question": "Which summoner spell is recommended for Top-lane Brand?",
+    "ground_truth": "Top-lane Brand uses Flash + Teleport. Teleport allows quick lane returns and roams; Flash provides mobility for engages or escapes.",
+    "answer": "For Top-lane Brand, the recommended summoner spells are Teleport and Ignite. Teleport allows for map control and roaming, while Ignite provides extra damage and kill potential in lane.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer is mostly correct but recommends Ignite instead of Flash."
+  },
+  {
+    "id": 11,
+    "category": "champion_desc",
+    "question": "Why is Pantheon considered a counter to Yasuo?",
+    "ground_truth": "Pantheon counters Yasuo because his W (Shield Vault) bypasses Yasuo's Wind Wall and instantly applies a stun, preventing Yasuo from blocking the engage.",
+    "answer": "Pantheon is considered a counter to Yasuo because of his ability to all-in and burst down Yasuo before he can scale and become a threat. Pantheon's Aegis Protection (W) blocks Yasuo's Wind Wall (W), rendering Yasuo's primary defensive tool ineffective. Additionally, Pantheon's Grand Skyfall (R) can be used to initiate on Yasuo, making it difficult for him to escape or react. Overall, Pantheon's aggressive playstyle and ability to shut down Yasuo's defenses make him a strong counter pick.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer is mostly correct but incorrectly states that Aegis Protection blocks Wind Wall, when in fact it's Shield Vault that bypasses Wind Wall."
+  },
+  {
+    "id": 12,
+    "category": "build_data",
+    "question": "What runes does Smolder ADC use in Diamond?",
+    "ground_truth": "Smolder ADC uses Lethal Tempo as the keystone with the Precision tree as the primary path, focusing on attack speed scaling.",
+    "answer": "I'm not aware of the current patch or the specific rune page used by Smolder ADC in Diamond. However, I can provide general information on common rune pages used by ADC champions. \n\nTypically, ADC champions use rune pages that focus on attack damage, critical strike chance, and attack speed. A common rune page for ADC champions includes:\n\n* Precision as the primary tree, with runes such as Conqueror, Presence of Mind, Legend: Alacrity, and Coup de Grace.\n* Sorcery as the secondary tree, with runes such as Manaflow Band and Transcendence.\n\nKeep in mind that rune pages can vary depending on the champion, playstyle, and patch. For the most up-to-date information, I recommend checking Smolder's stream or a reliable League of Legends resource.",
+    "correctness": 2,
+    "relevance": 4,
+    "reason": "The answer provides general information on ADC rune pages but does not specifically address Smolder ADC's rune page in Diamond."
+  },
+  {
+    "id": 13,
+    "category": "leaderboard",
+    "question": "What are the most popular core items for Top lane in Diamond?",
+    "ground_truth": "The most popular core items for Top lane in Diamond include Plated Steelcaps, Sundered Sky, Mercury's Treads, Black Cleaver, and Sorcerer's Shoes.",
+    "answer": "In Diamond tier, the most popular core items for Top lane typically include:\n\n1. Trinity Force: For fighters and bruisers like Jax, Riven, and Camille.\n2. Divine Sunderer: For juggernauts like Darius, Nautilus, and Sion.\n3. Sterak's Gage: For tanks and bruisers like Shen, Ornn, and Volibear.\n4. Plated Steel Caps: For tanks like Malphite, Maokai, and Galio.\n5. Stridebreaker: For mobile fighters like Renekton, Aatrox, and Fiora.\n\nThese items provide a balance of damage, survivability, and utility, and can be adapted to various champion playstyles. However, item builds can vary depending on the specific champion, playstyle, and patch notes.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer provides some relevant information but includes mostly incorrect items."
+  },
+  {
+    "id": 14,
+    "category": "champion_desc",
+    "question": "Why is Malphite considered a good pick against attack damage heavy champions?",
+    "ground_truth": "Malphite is strong against AD-heavy teams because his W (Thunderclap) increases his Armor, directly reducing physical damage taken. His passive Granite Shield also absorbs damage.",
+    "answer": "Malphite is considered a good pick against attack damage (AD) heavy champions due to his abilities that provide armor and crowd control, making it difficult for AD champions to deal damage to him. His passive, Granite Shield, grants him a shield that absorbs damage based on his armor, and his W, Thunderclaw, knocks up enemies, preventing them from attacking. Additionally, his ultimate, Unstoppable Onslaught, allows him to charge at enemies, stunning them and setting up opportunities for his team to follow up. Overall, Malphite's kit provides a lot of protection and disruption against AD heavy champions, making him a strong counter pick.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer is mostly correct but incorrectly refers to Malphite's W as Thunderclaw instead of Thunderclap."
+  },
+  {
+    "id": 15,
+    "category": "leaderboard",
+    "question": "Which Jungle champions have the highest win rate this patch?",
+    "ground_truth": "The Jungle champions with the highest win rates in Diamond patch 16.9 include Shyvana (53.9%), with strong performances from junglers like Nocturne, Warwick, and Olaf.",
+    "answer": "As my knowledge cutoff is December 2023, I don't have real-time patch data. However, based on general trends and past patch notes, some of the strongest Jungle champions tend to be:\n\n1. Sejuani - Known for her high damage and crowd control.\n2. Elise - A versatile champion with strong ganks and dueling potential.\n3. Lee Sin - A highly mobile champion with strong early game and late game potential.\n4. Kha'Zix - An assassin-style Jungle champion with high damage and burst potential.\n5. Vi - A bruiser-style champion with strong ganks and team fight potential.\n\nPlease note that win rates can fluctuate with each patch, and it's best to check the current patch notes and statistics for the most up-to-date information.",
+    "correctness": 1,
+    "relevance": 4,
+    "reason": "The answer provides some relevant Jungle champions but does not match the ground-truth facts for the specific patch."
+  },
+  {
+    "id": 16,
+    "category": "build_data",
+    "question": "Which rune setup is most effective for Ahri Mid?",
+    "ground_truth": "Ahri Mid uses Sorcery as the primary tree with Domination as the secondary, prioritizing burst damage, mobility, and lane sustain.",
+    "answer": "For Ahri Mid, a common and effective rune setup is:\n\n* Primary Path: Sorcery\n\t+ Summoner's Insight (or First Strike)\n\t+ Manaflow Band\n\t+ Transcendence\n\t+ Scorch\n* Secondary Path: Inspiration\n\t+ Magical Footwear\n\t+ Cosmic Insight\n\nThis setup provides Ahri with ability haste, mana sustain, and damage. However, rune setups can vary depending on playstyle and the current meta.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The candidate answer incorrectly specifies Inspiration as the secondary tree instead of Domination."
+  },
+  {
+    "id": 17,
+    "category": "build_data",
+    "question": "What is the best first item for Jinx ADC?",
+    "ground_truth": "Strong first items for Jinx ADC include Hexoptics C44, Phantom Dancer, or Infinity Edge depending on the build path.",
+    "answer": "The best first item for Jinx ADC is typically Doran's Blade, as it provides attack damage, health, and lifesteal, which helps Jinx to last-hit minions and trade with enemy champions in the early game.",
+    "correctness": 1,
+    "relevance": 5,
+    "reason": "The answer is almost entirely wrong as it does not include any of the strong first items for Jinx ADC."
+  },
+  {
+    "id": 18,
+    "category": "build_data",
+    "question": "What summoner spells are recommended for Darius Top?",
+    "ground_truth": "Darius Top uses Flash + Ghost for engage, chasing, and kill pressure.",
+    "answer": "For Darius Top, the recommended summoner spells are:\n\n1. Teleport: Allows Darius to roam and influence other lanes, as well as quickly return to his own lane.\n2. Ignite: Enhances Darius' already high damage potential and helps secure kills, especially in the early game.\n\nThese spells complement Darius' aggressive playstyle and help him dominate the top lane.",
+    "correctness": 1,
+    "relevance": 4,
+    "reason": "The answer provides summoner spells for Darius Top, but they are not the recommended ones."
+  },
+  {
+    "id": 19,
+    "category": "build_data",
+    "question": "What is the most popular skill order for Ezreal ADC?",
+    "ground_truth": "Ezreal ADC maxes Q (Mystic Shot) first, then E (Arcane Shift), then W (Essence Flux). Skill priority: QEW.",
+    "answer": "The most common skill order for Ezreal ADC is:\n\n1. Q (Mystic Shot) at level 1\n2. W (Essence Flux) at level 2\n3. E (Arcane Shift) at level 3\n4. Q (Mystic Shot) at level 4\n5. W (Essence Flux) at level 5\n6. R (Trueshot Barrage) at level 6\n7. Q (Mystic Shot) at level 7\n8. E (Arcane Shift) at level 8\n9. W (Essence Flux) at level 9\n10. Q (Mystic Shot) at level 10\n11. E (Arcane Shift) at level 11\n12. R (Trueshot Barrage) at level 11 (if available) or E (Arcane Shift) at level 12\n13. W (Essence Flux) at level 13\n14. Q (Mystic Shot) at level 14\n15. E (Arcane Shift) at level 15\n16. R (Trueshot Barrage) at level 16\n17. W (Essence Flux) at level 17\n18. Q (Mystic Shot) at level 18\n\nThis order prioritizes Mystic Shot for its high damage and attack speed, while also taking Essence Flux for its ability to proc on-hit effects and Arcane Shift for its mobility and survivability. However, skill orders may vary depending on the player's playstyle and the specific game situation.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer provides the correct skill priority but includes unnecessary details about each level."
+  },
+  {
+    "id": 20,
+    "category": "build_data",
+    "question": "What are the recommended boots for Katarina Mid?",
+    "ground_truth": "Katarina Mid typically builds Sorcerer's Shoes for additional magic penetration and burst damage.",
+    "answer": "For Katarina Mid, the recommended boots are Sorcery Shoes (also known as Sorcery boots or Ionian Boots of Lucidity, but most commonly referred to as Sorcery Shoes prior to a name change) or Mercury's Treads, depending on the enemy team composition. \n\n- Sorcery Shoes provide cooldown reduction and ability haste, which is beneficial for Katarina's high damage and frequent ability usage.\n- Mercury's Treads offer tenacity and magic resist, which can be helpful against teams with heavy crowd control or magic damage.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer mentions the correct boots but also provides extra information about alternative options."
+  },
+  {
+    "id": 21,
+    "category": "champion_desc",
+    "question": "Why is Morgana considered a strong counter to crowd-control heavy teams?",
+    "ground_truth": "Morgana's E (Black Shield) blocks all crowd control effects on the targeted ally, protecting them from stuns, roots, and other disables.",
+    "answer": "Morgana is considered a strong counter to crowd-control heavy teams due to her ability, Black Shield (E), which grants a target ally a shield that absorbs the next enemy ability that hits them, and also blocks crowd control effects such as stuns, roots, and silences. This allows her allies to avoid or mitigate the effects of enemy crowd control, making it difficult for the opposing team to lock them down.",
+    "correctness": 5,
+    "relevance": 5,
+    "reason": "The answer accurately describes Morgana's Black Shield ability and its effectiveness against crowd-control heavy teams."
+  },
+  {
+    "id": 22,
+    "category": "build_data",
+    "question": "What is the recommended core build for Veigar Mid?",
+    "ground_truth": "Veigar Mid's core items include Sorcerer's Shoes, Shadowflame, Rabadon's Deathcap, Zhonya's Hourglass, and Void Staff. Doran's Ring is a common starting item.",
+    "answer": "The recommended core build for Veigar Mid typically includes:\n\n1. Sorcery Shoes (or Luden's Tempest for extra damage and ability haste)\n2. Luden's Tempest (or Everfrost for extra ability power and crowd control)\n3. Rabadon's Deathcap (for increased ability power)\n4. Void Staff (for magic penetration)\n5. Mejai's Soulstealer or Archangel's Staff (for additional ability power and survivability)\n\nThis build focuses on maximizing Veigar's ability power and ability haste to deal damage and roam effectively. However, the exact build may vary depending on the game's progression and the player's playstyle.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer partially addresses the question but includes incorrect or incomplete information about Veigar Mid's core build."
+  },
+  {
+    "id": 23,
+    "category": "build_data",
+    "question": "Which rune setup works best for Leona Support?",
+    "ground_truth": "Leona Support uses Resolve as the primary tree (Aftershock keystone) with Inspiration as the secondary tree, focusing on durability and engage potential.",
+    "answer": "For Leona Support, a common and effective rune setup is:\n\n* Primary Path: Inspiration (Glacial Augment, Magical Footwear, Biscuit Delivery)\n* Secondary Path: Resolve (Demolish, Conditioning or Bone Plating)\n\nThis setup provides Leona with increased ability power, cooldown reduction, and survivability, while also giving her gold and health advantages through Magical Footwear and Biscuit Delivery. However, rune setups can vary depending on playstyle and the current meta.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The candidate answer provides a rune setup, but it does not match the ground-truth facts."
+  },
+  {
+    "id": 24,
+    "category": "champion_desc",
+    "question": "Why is Ornn considered a strong tank top laner?",
+    "ground_truth": "Ornn provides strong engage with his ultimate Call of the Forge God, scales well with resistances, and uniquely upgrades items for his entire team, providing massive team utility.",
+    "answer": "Ornn is considered a strong tank top laner due to his ability to absorb and redirect damage, as well as his capability to provide utility and protection for his allies. His kit includes:\n\n1. Bellows Breath (Q): A damage-dealing ability that also grants Ornn a shield.\n2. Searing Charge (W): A dash that allows Ornn to reposition and engage or disengage from fights.\n3. Volcanic Rupture (E): A ground-targeted ability that slows and damages enemies.\n4. Call of the Forge God (R): An ultimate ability that summons a massive hammer that deals damage and pulls enemies towards Ornn.\n\nOrnn's strengths as a tank top laner include:\n\n* High health and armor, making him durable in lane\n* Ability to absorb and redirect damage with his shield and ultimate\n* Strong initiation and engagement tools with his Q and W\n* Utility and crowd control with his E and R\n\nOverall, Ornn's combination of damage, utility, and survivability make him a formidable tank top laner in League of Legends.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer is mostly correct but lacks mention of Ornn's unique item upgrading ability."
+  },
+  {
+    "id": 25,
+    "category": "build_data",
+    "question": "What is LeBlanc Mid's recommended core build in Diamond?",
+    "ground_truth": "LeBlanc Mid's core build typically includes Sorcerer's Shoes, Hextech Rocketbelt or Stormsurge, with focus on burst damage and mobility.",
+    "answer": "In Diamond tier, LeBlanc Mid's recommended core build typically includes:\n\n1. Sorcery Shoes (or Luden's Tempest for more damage)\n2. Needlessly Large Rod (into Luden's Tempest or Rabadon's Deathcap)\n3. Rabadon's Deathcap (for ability power)\n4. Void Staff (for penetration)\n5. Mejai's Soulstealer or Banshee's Veil (depending on the game's progression and the need for survivability or extra ability power)\n\nThis build focuses on ability power, penetration, and cooldown reduction to maximize LeBlanc's damage and roaming potential. However, the exact build may vary depending on the player's playstyle, the enemy team composition, and the current patch.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer is mostly correct but includes some extra items not typically considered core."
+  },
+  {
+    "id": 26,
+    "category": "build_data",
+    "question": "What is the recommended core build for Darius Top?",
+    "ground_truth": "Darius Top's core build includes Plated Steelcaps, Trinity Force or Stridebreaker, and Sterak's Gage. Doran's Blade is a common starting item.",
+    "answer": "The recommended core build for Darius Top typically includes:\n\n1. Trinity Force (for attack damage, ability haste, and survivability)\n2. Sterak's Gage (for health and burst damage)\n3. Black Cleaver (for armor penetration and ability haste)\n\nThis build focuses on dealing physical damage and taking advantage of Darius' abilities to control and execute enemies. However, builds can vary depending on the player's playstyle and the current patch.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer is mostly correct but omits Plated Steelcaps and includes Black Cleaver instead of Stridebreaker."
+  },
+  {
+    "id": 27,
+    "category": "build_data",
+    "question": "In which order should I scale abilities on Teemo Top?",
+    "ground_truth": "Teemo Top maxes E (Toxic Shot) first, then Q (Blinding Dart), then W (Move Quick). Skill priority: EQW.",
+    "answer": "For Teemo Top, a common ability scaling order is:\n\n1. Q (Blinding Dart) for early game harass and damage\n2. W (Move Quick) for increased mobility and chase potential\n3. E (Toxic Shot) for auto-attack damage and scaling\n\nThis order prioritizes damage and mobility, allowing Teemo to effectively trade and roam in the top lane. However, the exact scaling order may vary depending on the player's playstyle and the game's progression.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer provides a scaling order, but it does not match the ground-truth order of EQW."
+  },
+  {
+    "id": 28,
+    "category": "champion_desc",
+    "question": "Why is Thresh considered a strong Support champion?",
+    "ground_truth": "Thresh has strong engage and disengage tools with his Q (Death Sentence) hook, lantern (W) for saving allies, and a slowing AoE (E) that provides excellent crowd control and protection.",
+    "answer": "Thresh is considered a strong Support champion due to his versatile kit, which provides crowd control, protection, and utility for his allies. His abilities include:\n\n1. Death Sentence (Q): A hook that can pull enemies towards him, setting up potential kills or escapes.\n2. Dark Passage (W): A lantern that shields allies and allows them to reposition quickly.\n3. Flay (E): A knock-up that can be used to initiate fights or peel for his allies.\n4. The Box (R): A ultimate ability that slows and damages enemies within its area, making it difficult for them to escape.\n\nThresh's kit allows him to:\n\n* Initiate and control team fights\n* Protect his allies with shields and knock-ups\n* Set up ambushes and traps with his hook and ultimate\n* Provide vision control with his lantern\n\nOverall, Thresh's abilities make him a highly effective Support champion who can greatly impact the outcome of team fights and provide significant value to his team.",
+    "correctness": 5,
+    "relevance": 5,
+    "reason": "The candidate answer accurately describes Thresh's abilities and their impact on his role as a Support champion."
+  },
+  {
+    "id": 29,
+    "category": "leaderboard",
+    "question": "What are the most popular core items for Mid lane in Diamond?",
+    "ground_truth": "The most popular core items for Mid lane in Diamond include Sorcerer's Shoes, Shadowflame, Rabadon's Deathcap, and Stormsurge.",
+    "answer": "In Diamond Mid lane, the most popular core items often vary depending on the champion. However, some common core items include:\n\n* Sorcery-based champions: Luden's Tempest, Rabadon's Deathcap, and Void Staff\n* Ability Power (AP) assassins: Liandry's Anguish, Rabadon's Deathcap, and Mejai's Soulstealer\n* Burst damage dealers: Luden's Tempest, Rabadon's Deathcap, and Horizon Focus\n\nThese items provide ability power, mana, and cooldown reduction, which are essential for Mid lane champions to deal damage and roam effectively. However, the specific item build can vary depending on the champion, playstyle, and the current meta.",
+    "correctness": 4,
+    "relevance": 5,
+    "reason": "The answer provides mostly correct information about popular core items for Mid lane in Diamond, but with some omissions and variations."
+  },
+  {
+    "id": 30,
+    "category": "leaderboard",
+    "question": "Which top lane champions have the highest win rates this patch?",
+    "ground_truth": "High-win-rate top laners in Diamond patch 16.9 include Garen, Fiddlesticks, Kayle, Kled, Malphite, Mordekaiser, Naafiri, Ornn, Singed, Teemo, and Viktor.",
+    "answer": "As of my last update, the top lane champions with the highest win rates can vary depending on the patch and rank. However, based on general trends and previous patch data, some top lane champions who often have high win rates include:\n\n1. Darius - Known for his strong early game and ability to roam effectively.\n2. Camille - Excels at dueling and has a lot of utility for team fights.\n3. Jax - A highly aggressive champion with strong late-game potential.\n4. Riven - A mobile and aggressive champion with high damage potential.\n5. Ornn - A tanky champion with strong utility and ability to protect allies.\n\nPlease note that win rates can change with each patch, and it's always best to check the current patch notes and statistics for the most up-to-date information.",
+    "correctness": 2,
+    "relevance": 5,
+    "reason": "The answer lists some top laners but only one matches the ground truth."
+  }
+]

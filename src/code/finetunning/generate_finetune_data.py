@@ -6,7 +6,7 @@ import random
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, pipeline
 from huggingface_hub import login
 
-HF_TOKEN = os.getenv("HF_API_KEY")
+HF_TOKEN = os.getenv("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")
 login(token=HF_TOKEN)
 print("HuggingFace login OK.", flush=True)
 
