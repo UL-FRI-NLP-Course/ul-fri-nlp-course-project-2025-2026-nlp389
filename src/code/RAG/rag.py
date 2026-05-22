@@ -16,7 +16,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from huggingface_hub import login
 import os
 
-HF_TOKEN = os.getenv("HF_API_KEY")
+HF_TOKEN = os.getenv("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")
 login(token=HF_TOKEN)
 
 print("=" * 60)
